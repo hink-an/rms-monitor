@@ -1,5 +1,19 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-10T15:00:00+09:00",
-  "results": []
+  "updated_at": "2026-09-10T16:45:00+09:00",
+  "results": [
+    {
+      "id": "RMS-2026-TEST-001",
+      "law_name": "労働安全衛生規則 第577条の2関係",
+      "change_summary": "濃度基準値の対象としてアクリル酸2-エチルヘキシル等78物質が追加された。",
+      "published_date": "2025-10-08",
+      "effective_date": "2026-10-01",
+      "source_name": "厚生労働省",
+      "source_url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9363&dataType=1&pageNo=1",
+      "ai_relevance": "中",
+      "ai_reason": "樹脂加工・インクジェット印刷等で使用するインク、洗浄剤、接着剤その他の化学製品に対象物質が含まれる可能性があるため、現在使用中のSDSとの照合が必要。",
+      "recommended_action": "使用中の化学物質およびSDSを確認し、追加された対象78物質の含有有無を確認する。",
+      "status": "要確認"
+    }
+  ]
 }
