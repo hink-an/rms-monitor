@@ -1,15 +1,20 @@
 {
-  "event_key": "rms-waste-2026-001",
-  "target_code": "RMS-LAW-0008",
-  "target_name": "廃棄物処理法",
-  "detected_date": "2026-09-10",
-  "published_date": "2026-06-19",
-  "effective_date": "",
-  "summary": "廃棄物処理法等の改正により、使用済金属・プラスチック物品を保管等する事業者に対する許可制度が導入された。",
-  "classification": "要確認",
-  "reason": "2026年6月19日の改正法公布を環境省公式情報で確認。自社が新制度の対象となるかは事実確認が必要。",
-  "related_docs": "廃棄物分別及び処理実施委託規定",
-  "source_name": "環境省",
-  "source_url": "https://www.env.go.jp/press/press_05346.html",
-  "notes": "使用済金属・プラスチック物品の保管・再生に関する自社の実態を確認し、制度対象の該当有無を判断する。"
+  "generated_at": "2026-09-10T17:40:00+09:00",
+  "monitor_results": [
+    {
+      "event_key": "rms-waste-2026-001",
+      "target_code": "RMS-LAW-0008",
+      "target_name": "廃棄物処理法",
+      "detected_date": "2026-09-10",
+      "published_date": "2026-06-19",
+      "effective_date": "",
+      "summary": "廃棄物処理法等の改正により、使用済金属・プラスチック物品を保管等する事業者に対する許可制度が導入された。",
+      "classification": "要確認",
+      "reason": "2026年6月19日に改正法が公布されたことを環境省公式情報で確認。自社が制度対象に該当するかは社内確認が必要。",
+      "related_docs": "廃棄物分別及び処理実施委託規定",
+      "source_name": "環境省",
+      "source_url": "https://www.env.go.jp/press/press_05346.html",
+      "notes": "使用済金属・プラスチック物品の保管又は再生に関する自社の実態を確認し、新制度の対象該当有無を判断する。"
+    }
+  ]
 }
