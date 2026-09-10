@@ -1,20 +1,35 @@
 {
-  "generated_at": "2026-09-10T07:56:02.415Z",
+  "generated_at": "2026-09-10T08:10:00.000Z",
   "monitor_results": [
     {
       "event_key": "rms-2026-test-001",
       "target_code": "RMS-LAW-0011",
-      "target_name": "労働安全衛生規則 第577条の2関係",
+      "target_name": "労働安全衛生法",
       "detected_date": "2026-09-10",
       "published_date": "2025-10-08",
       "effective_date": "2026-10-01",
       "summary": "濃度基準値の対象としてアクリル酸2-エチルヘキシル等78物質が追加された。",
       "classification": "要確認",
       "reason": "樹脂加工・インクジェット印刷等で使用するインク、洗浄剤、接着剤その他の化学製品に対象物質が含まれる可能性があるため、現在使用中のSDSとの照合が必要。",
-      "related_docs": "",
+      "related_docs": "化学物質管理規定／監視および測定実施規定",
       "source_name": "厚生労働省",
       "source_url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9363&dataType=1&pageNo=1",
       "notes": "使用中の化学物質およびSDSを確認し、追加された対象物質の含有有無を確認する。"
+    },
+    {
+      "event_key": "rms-2026-test-002",
+      "target_code": "RMS-LAW-0011",
+      "target_name": "労働安全衛生法",
+      "detected_date": "2026-09-10",
+      "published_date": "",
+      "effective_date": "",
+      "summary": "【動作確認用】追加の法改正情報を検知した想定のテストデータ。",
+      "classification": "要確認",
+      "reason": "『まだ確定しない』ボタンの動作確認用。実際の法改正判断には使用しない。",
+      "related_docs": "化学物質管理規定",
+      "source_name": "動作確認用テスト",
+      "source_url": "https://example.com/",
+      "notes": "RMSの『まだ確定しない』ボタン確認後に削除予定。"
     }
   ]
 }
