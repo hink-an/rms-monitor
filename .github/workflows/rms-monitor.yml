@@ -11,8 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Check monitoring environment
         run: |
           echo "RMS monitoring environment test"
           echo "GitHub Actions is running normally."
           echo "Existing RMS data will not be modified."
+
+      - name: Test official source connections
+        run: python3 rms_source_check.py
