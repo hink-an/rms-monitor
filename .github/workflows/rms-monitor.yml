@@ -1,0 +1,18 @@
+name: RMS Monitor Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check monitoring environment
+        run: |
+          echo "RMS monitoring environment test"
+          echo "GitHub Actions is running normally."
+          echo "Existing RMS data will not be modified."
