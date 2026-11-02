@@ -1,0 +1,45 @@
+name: RMS Monitor v0.6 Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compare saved snapshot against itself
+        run: |
+          python3 rms_env_monitor_v06.py \
+            --previous rms-env-monitor-v05-baseline.json \
+            --current rms-env-monitor-v05-baseline.json \
+            --output rms-env-monitor-v06-test.json
+
+      - name: Verify zero new and five unchanged
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path('rms-env-monitor-v06-test.json').read_text(encoding='utf-8'))
+          diff = result['comparison']
+          assert result['comparison_kind'] == 'OFFLINE_SNAPSHOT_TEST'
+          assert diff['mode'] == 'COMPARED'
+          assert len(diff['new_candidate_ids']) == 0, diff
+          assert len(diff['unchanged_ids']) == 5, diff
+          assert len(diff['removed_from_current_list_ids']) == 0, diff
+          assert result['legal_change_verified'] is False
+          print('PASS: compared, new=0, unchanged=5, absent=0; no legal changes verified')
+          PY
+
+      - name: Save v0.6 offline test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-monitor-v06-offline-result
+          path: rms-env-monitor-v06-test.json
+          if-no-files-found: error
+          retention-days: 30
