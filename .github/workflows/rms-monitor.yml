@@ -28,3 +28,5 @@ jobs:
         run: python3 rms_env_monitor_v02.py
       - name: Test environment ministry monitoring v0.3
         run: python3 rms_env_monitor_v03.py
+      - name: Test environment ministry monitoring v0.4
+        run: python3 rms_env_monitor_v04.py
