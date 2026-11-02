@@ -22,3 +22,5 @@ jobs:
 
       - name: Test official source connections
         run: python3 rms_source_check.py
+      - name: Test environment ministry monitoring
+        run: python3 rms_env_monitor.py
