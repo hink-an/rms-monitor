@@ -32,3 +32,10 @@ jobs:
         run: python3 rms_env_monitor_v04.py
       - name: Test environment ministry monitoring v0.5
         run: python3 rms_env_monitor_v05.py
+      - name: Save v0.5 test snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-monitor-v05-snapshot
+          path: rms-env-monitor-v05-test.json
+          if-no-files-found: error
+          retention-days: 30
