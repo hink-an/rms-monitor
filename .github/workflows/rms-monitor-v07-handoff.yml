@@ -1,0 +1,56 @@
+name: RMS Monitor v0.7 Handoff Offline Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'seed first; compare on the next run'
+        required: true
+        type: choice
+        options:
+          - seed
+          - compare
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: rms-v07-handoff-main
+  cancel-in-progress: false
+
+jobs:
+  handoff-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Seed baseline for first run
+        if: ${{ inputs.test_mode == 'seed' }}
+        run: |
+          python3 rms_env_monitor_v07.py \
+            --mode seed \
+            --current rms-env-monitor-v05-baseline.json \
+            --out-dir v07-output
+
+      - name: Compare with last successful v0.7 artifact
+        if: ${{ inputs.test_mode == 'compare' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 rms_env_monitor_v07.py \
+            --mode compare \
+            --current rms-env-monitor-v06-new1-fixture.json \
+            --out-dir v07-output
+
+      - name: Upload validated offline handoff result
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-v07-validated-state
+          path: |
+            v07-output/rms-v07-state.json
+            v07-output/rms-v07-result.json
+          if-no-files-found: error
+          retention-days: 30
