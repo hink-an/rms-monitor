@@ -1,0 +1,49 @@
+name: RMS Monitor v0.7 API Authentication Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check API access without exposing credentials
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo 'TOKEN_PRESENT=no'
+            exit 1
+          fi
+          echo 'TOKEN_PRESENT=yes'
+          base="https://api.github.com/repos/${REPO}"
+          check() {
+            local label="$1" url="$2" code
+            code=$(curl --silent --show-error --location --output /dev/null \
+              --write-out '%{http_code}' \
+              --header "Authorization: Bearer ${GH_TOKEN}" \
+              --header 'Accept: application/vnd.github+json' \
+              --header 'X-GitHub-Api-Version: 2022-11-28' \
+              --max-time 20 "$url")
+            echo "${label}_HTTP_STATUS=${code}"
+            if [ "$code" != 200 ]; then
+              return 1
+            fi
+          }
+          failed=0
+          check REPOSITORY "$base" || failed=1
+          check WORKFLOW_RUNS "$base/actions/workflows/rms-monitor-v07-handoff.yml/runs?event=workflow_dispatch&status=success&per_page=5" || failed=1
+          check REPOSITORY_ARTIFACTS "$base/actions/artifacts?per_page=5" || failed=1
+          if [ "$failed" -ne 0 ]; then
+            echo 'DIAGNOSIS=One or more endpoints returned a non-200 status; no secrets or response bodies printed.'
+            exit 1
+          fi
+          echo 'DIAGNOSIS=All API probes returned 200.'
