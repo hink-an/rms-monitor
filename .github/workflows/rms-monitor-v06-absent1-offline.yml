@@ -1,0 +1,59 @@
+name: RMS Monitor v0.6 Absent-One Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  absent-one-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compare baseline with one-absent fixture (offline)
+        run: |
+          python3 rms_env_monitor_v06.py \
+            --previous rms-env-monitor-v05-baseline.json \
+            --current rms-env-monitor-v06-absent1-fixture.json \
+            --output rms-env-monitor-v06-absent1-result.json
+
+      - name: Verify zero new, four unchanged, one absent (not repeal)
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          baseline = json.loads(Path('rms-env-monitor-v05-baseline.json').read_text(encoding='utf-8'))
+          fixture = json.loads(Path('rms-env-monitor-v06-absent1-fixture.json').read_text(encoding='utf-8'))
+          result = json.loads(Path('rms-env-monitor-v06-absent1-result.json').read_text(encoding='utf-8'))
+          baseline_by_id = {r['id']: r for r in baseline['records']}
+          fixture_by_id = {r['id']: r for r in fixture['records']}
+          omitted_id = 'https://www.env.go.jp/press/press_05649.html'
+          diff = result['comparison']
+
+          assert len(baseline_by_id) == len(baseline['records']) == 5, 'Baseline must have five unique IDs'
+          assert len(fixture_by_id) == len(fixture['records']) == 4, 'Fixture must have four unique IDs'
+          assert set(fixture_by_id) == set(baseline_by_id) - {omitted_id}, 'Fixture must omit only designated ID'
+          assert all(fixture_by_id[k] == baseline_by_id[k] for k in fixture_by_id), 'Retained records must be unchanged'
+          assert result['comparison_kind'] == 'OFFLINE_SNAPSHOT_TEST'
+          assert diff['mode'] == 'COMPARED'
+          assert diff['new_candidate_ids'] == [], diff
+          assert set(diff['unchanged_ids']) == set(fixture_by_id), diff
+          assert diff['removed_from_current_list_ids'] == [omitted_id], diff
+          assert result['records'] == fixture['records'], 'Result must retain fixture records'
+          assert result['legal_change_verified'] is False
+          assert all(r.get('review_status') == 'UNVERIFIED' for r in result['records'])
+          assert 'repeal' in diff['note'].lower(), 'Output must clarify that disappearance is not repeal'
+          print('PASS: new=0, unchanged=4, absent=1; disappearance is NOT proof of repeal')
+          PY
+
+      - name: Save one-absent offline test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-monitor-v06-absent1-offline-result
+          path: rms-env-monitor-v06-absent1-result.json
+          if-no-files-found: error
+          retention-days: 30
