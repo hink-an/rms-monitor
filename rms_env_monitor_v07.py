@@ -63,6 +63,57 @@ def api_json(url, token):
     return json.loads(data)
 
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def download_artifact(download_url, repo, token):
+    """Read the authenticated API redirect, then download without forwarding token."""
+    parsed = urllib.parse.urlsplit(download_url)
+    prefix = f'/repos/{repo}/actions/artifacts/'
+    if (parsed.scheme != 'https' or parsed.hostname != 'api.github.com'
+            or parsed.username or parsed.password or parsed.port is not None
+            or not parsed.path.startswith(prefix) or not parsed.path.endswith('/zip')
+            or parsed.query or parsed.fragment):
+        raise ValueError('Unexpected artifact download URL')
+
+    no_redirect = urllib.request.build_opener(NoRedirect())
+    api_request = urllib.request.Request(download_url, headers={
+        'Authorization': f'Bearer {token}',
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'User-Agent': 'rms-monitor-v07',
+    })
+    try:
+        with no_redirect.open(api_request, timeout=30) as response:
+            status = response.status
+            location = response.headers.get('Location')
+    except urllib.error.HTTPError as exc:
+        status = exc.code
+        location = exc.headers.get('Location')
+        exc.close()
+    if status != 302 or not location:
+        raise ValueError(f'Artifact API expected HTTP 302, got {status}')
+
+    signed = urllib.parse.urlsplit(location)
+    if (signed.scheme != 'https' or not signed.hostname
+            or signed.username or signed.password or signed.port is not None
+            or signed.hostname == 'api.github.com' or signed.fragment):
+        raise ValueError('Unexpected signed artifact download location')
+    # Never forward the GitHub token to the signed storage URL.
+    signed_request = urllib.request.Request(location, headers={
+        'User-Agent': 'rms-monitor-v07',
+    })
+    with no_redirect.open(signed_request, timeout=30) as response:
+        if response.status != 200:
+            raise ValueError(f'Signed ZIP expected HTTP 200, got {response.status}')
+        data = response.read(MAX_BYTES + 1)
+    if len(data) > MAX_BYTES:
+        raise ValueError('Artifact archive too large')
+    return data
+
+
 def fetch_previous(repo, branch, current_run_id, token):
     safe_repo = urllib.parse.quote(repo, safe='/')
     url = (f'https://api.github.com/repos/{safe_repo}/actions/workflows/{WORKFLOW}/runs'
@@ -81,19 +132,11 @@ def fetch_previous(repo, branch, current_run_id, token):
         if len(eligible) != 1:
             raise ValueError('Ambiguous previous artifacts')
         download = eligible[0].get('archive_download_url')
-        if not download or not download.startswith(f'https://api.github.com/repos/{repo}/'):
-            raise ValueError('Unexpected artifact download URL')
-        req = urllib.request.Request(download, headers={
-            'Authorization': f'Bearer {token}',
-            'Accept': 'application/vnd.github+json',
-            'User-Agent': 'rms-monitor-v07',
-        })
-        with urllib.request.urlopen(req, timeout=30) as response:
-            data = response.read(MAX_BYTES + 1)
-        if len(data) > MAX_BYTES:
-            raise ValueError('Artifact archive too large')
+        if not download:
+            raise ValueError('Missing artifact download URL')
+        data = download_artifact(download, repo, token)
         with zipfile.ZipFile(io.BytesIO(data)) as archive:
-            if set(archive.namelist()) != {STATE_MEMBER, 'rms-v07-result.json'}:
+            if set(archive.namelist()) != {STATE_MEMBER, 'rms-v07-result.json'} or len(archive.infolist()) != 2:
                 raise ValueError('Unexpected files in previous artifact')
             info = archive.getinfo(STATE_MEMBER)
             if info.file_size > MAX_BYTES:
