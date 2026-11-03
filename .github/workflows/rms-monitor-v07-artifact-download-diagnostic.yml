@@ -1,0 +1,115 @@
+name: RMS Monitor v0.7 Artifact Download Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnose-artifact-download:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Diagnose previous successful run and artifact download safely
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+          GH_REF_NAME: ${{ github.ref_name }}
+          GH_RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import io, json, os, sys, urllib.request, urllib.error, urllib.parse, zipfile
+
+          token = os.environ.get('GH_TOKEN', '')
+          repo = os.environ.get('GH_REPOSITORY', '')
+          branch = os.environ.get('GH_REF_NAME', '')
+          run_id = int(os.environ.get('GH_RUN_ID', '0'))
+          if not token or not repo or not branch or not run_id:
+              sys.exit('FAIL: Missing execution context or token')
+          print('TOKEN_PRESENT=yes (value not printed)')
+          print('CURRENT_BRANCH_MATCH=' + str(branch == 'main').lower())
+          if branch != 'main':
+              sys.exit('FAIL: Only main branch is supported')
+          base = f'https://api.github.com/repos/{repo}'
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'User-Agent': 'rms-v07-artifact-diagnostic'
+          }
+
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, request, fp, code, msg, headers, newurl):
+                  return None
+
+          no_redirect = urllib.request.build_opener(NoRedirect())
+          def api_json(url, label):
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as response:
+                      print(f'{label}_HTTP={response.status}')
+                      raw = response.read(1000001)
+                      if len(raw) > 1000000:
+                          raise ValueError('API response too large')
+                      return json.loads(raw)
+              except urllib.error.HTTPError as exc:
+                  print(f'{label}_HTTP={exc.code}')
+                  raise RuntimeError(f'{label} request failed') from None
+
+          runs = api_json(base + '/actions/workflows/rms-monitor-v07-handoff.yml/runs?event=workflow_dispatch&status=success&per_page=50', 'RUN_LIST')
+          eligible = [r for r in runs.get('workflow_runs', []) if r.get('head_branch') == branch and int(r.get('id', 0)) < run_id and r.get('conclusion') == 'success']
+          if not eligible:
+              sys.exit('FAIL: No previous successful handoff run')
+          previous = max(eligible, key=lambda r: r['id'])
+          print('PREVIOUS_SUCCESS_RUN_FOUND=yes')
+          artifacts = api_json(base + f"/actions/runs/{previous['id']}/artifacts?per_page=100", 'ARTIFACT_LIST')
+          matches = [a for a in artifacts.get('artifacts', []) if a.get('name') == 'RMS-v07-validated-state' and not a.get('expired')]
+          print('MATCHING_UNEXPIRED_ARTIFACT_COUNT=' + str(len(matches)))
+          if len(matches) != 1:
+              sys.exit('FAIL: Expected exactly one unexpired artifact')
+          url = matches[0]['archive_download_url']
+          parsed = urllib.parse.urlsplit(url)
+          if parsed.scheme != 'https' or parsed.hostname != 'api.github.com' or not parsed.path.startswith(f'/repos/{repo}/actions/artifacts/'):
+              sys.exit('FAIL: Unexpected archive API URL')
+
+          # No redirect follows with Authorization: inspect initial API response separately.
+          try:
+              response = no_redirect.open(urllib.request.Request(url, headers=headers), timeout=20)
+              code = response.status
+              response.close()
+              location = None
+          except urllib.error.HTTPError as exc:
+              code = exc.code
+              location = exc.headers.get('Location')
+              exc.close()
+          print('ARCHIVE_API_HTTP=' + str(code))
+          if code != 302 or not location:
+              sys.exit('FAIL: Archive API did not return a signed redirect')
+          redirect = urllib.parse.urlsplit(location)
+          if redirect.scheme != 'https' or not redirect.hostname or redirect.username or redirect.password or redirect.hostname == 'api.github.com':
+              sys.exit('FAIL: Unexpected signed download location')
+          print('SIGNED_REDIRECT_PRESENT=yes (URL not printed)')
+          # IMPORTANT: Never forward the GitHub bearer token to the redirected host.
+          signed_req = urllib.request.Request(location, headers={'User-Agent': 'rms-v07-artifact-diagnostic'})
+          try:
+              with no_redirect.open(signed_req, timeout=30) as response:
+                  print('SIGNED_ZIP_HTTP=' + str(response.status))
+                  data = response.read(2000001)
+          except urllib.error.HTTPError as exc:
+              print('SIGNED_ZIP_HTTP=' + str(exc.code))
+              sys.exit('FAIL: Signed download failed (body not printed)')
+          if len(data) > 2000000:
+              sys.exit('FAIL: Archive exceeds 2MB test limit')
+          with zipfile.ZipFile(io.BytesIO(data)) as z:
+              names = set(z.namelist())
+              print('EXPECTED_STATE_MEMBER_PRESENT=' + str('rms-v07-state.json' in names).lower())
+              print('EXPECTED_RESULT_MEMBER_PRESENT=' + str('rms-v07-result.json' in names).lower())
+              if not {'rms-v07-state.json', 'rms-v07-result.json'} <= names:
+                  sys.exit('FAIL: Artifact ZIP members do not match')
+              state = json.loads(z.read('rms-v07-state.json'))
+              print('STATE_RECORD_COUNT=' + str(len(state.get('records', []))))
+          print('DIAGNOSIS=PASS: API authentication, 302 redirect, signed ZIP download and member validation succeeded')
+          PY
