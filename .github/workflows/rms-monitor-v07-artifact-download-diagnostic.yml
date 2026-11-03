@@ -70,7 +70,7 @@ jobs:
           print('ARTIFACT_TOTAL_COUNT=' + str(artifacts.get('total_count')))
           print('ARTIFACT_RETURNED_COUNT=' + str(len(artifacts.get('artifacts', []))))
           print('ARTIFACT_DETAILS=' + str([(a.get('name'), a.get('expired')) for a in artifacts.get('artifacts', [])]))
-          matches = [a for a in artifacts.get('artifacts', []) if a.get('name') == 'RMS-v07-validated-state' and not a.get('expired')]
+          matches = [a for a in artifacts.get('artifacts', []) if a.get('name') == 'rms-v07-validated-state' and not a.get('expired')]
           print('MATCHING_UNEXPIRED_ARTIFACT_COUNT=' + str(len(matches)))
           if len(matches) != 1:
               sys.exit('FAIL: Expected exactly one unexpired artifact')
