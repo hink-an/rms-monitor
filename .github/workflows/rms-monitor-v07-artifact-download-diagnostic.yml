@@ -64,6 +64,7 @@ jobs:
           if not eligible:
               sys.exit('FAIL: No previous successful handoff run')
           previous = max(eligible, key=lambda r: r['id'])
+          print('SELECTED_PREVIOUS_RUN_ID=' + str(previous['id']))
           print('PREVIOUS_SUCCESS_RUN_FOUND=yes')
           artifacts = api_json(base + f"/actions/runs/{previous['id']}/artifacts?per_page=100", 'ARTIFACT_LIST')
           matches = [a for a in artifacts.get('artifacts', []) if a.get('name') == 'RMS-v07-validated-state' and not a.get('expired')]
