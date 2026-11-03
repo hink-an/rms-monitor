@@ -1,0 +1,56 @@
+name: RMS Monitor v0.6 New-One Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  new-one-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compare baseline with synthetic one-new fixture (offline)
+        run: |
+          python3 rms_env_monitor_v06.py \
+            --previous rms-env-monitor-v05-baseline.json \
+            --current rms-env-monitor-v06-new1-fixture.json \
+            --output rms-env-monitor-v06-new1-result.json
+
+      - name: Verify exactly one synthetic new record and five unchanged
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          baseline = json.loads(Path('rms-env-monitor-v05-baseline.json').read_text(encoding='utf-8'))
+          fixture = json.loads(Path('rms-env-monitor-v06-new1-fixture.json').read_text(encoding='utf-8'))
+          result = json.loads(Path('rms-env-monitor-v06-new1-result.json').read_text(encoding='utf-8'))
+          original_ids = {r['id'] for r in baseline['records']}
+          fixture_ids = {r['id'] for r in fixture['records']}
+          synthetic_id = 'urn:rms-monitor:offline-test:synthetic-new-001'
+          diff = result['comparison']
+
+          assert len(original_ids) == 5, 'Baseline must have five unique IDs'
+          assert len(fixture_ids) == 6, 'Fixture must have six unique IDs'
+          assert fixture_ids == original_ids | {synthetic_id}, 'Fixture must add exactly the synthetic ID'
+          assert result['comparison_kind'] == 'OFFLINE_SNAPSHOT_TEST'
+          assert diff['mode'] == 'COMPARED'
+          assert diff['new_candidate_ids'] == [synthetic_id], diff
+          assert set(diff['unchanged_ids']) == original_ids, diff
+          assert diff['removed_from_current_list_ids'] == [], diff
+          assert result['legal_change_verified'] is False
+          assert all(r.get('review_status') == 'UNVERIFIED' for r in result['records'])
+          print('PASS: new=1 (synthetic), unchanged=5, absent=0; no legal changes verified')
+          PY
+
+      - name: Save synthetic one-new test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-monitor-v06-new1-offline-result
+          path: rms-env-monitor-v06-new1-result.json
+          if-no-files-found: error
+          retention-days: 30
