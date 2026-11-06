@@ -1,0 +1,24 @@
+name: RMS Monitor v0.7 Fail-Closed Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fail-closed-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Fail-Closed tests
+        run: python -m unittest discover -s . -p 'test_rms_v07_fail_closed.py' -v
