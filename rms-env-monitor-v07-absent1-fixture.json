@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "monitor_version": "0.6-test-fixture",
+  "captured_at_utc": "2026-11-02T06:01:03.770020+00:00",
+  "source_list": "https://www.env.go.jp/press/",
+  "coverage": "OFFLINE FIXTURE ONLY: five original unverified candidates; synthetic-new-001 deliberately omitted to test absent detection against prior six-record state. Not a fresh government retrieval.",
+  "legal_change_verified": false,
+  "records": [
+    {
+      "id": "https://www.env.go.jp/press/press_05740.html",
+      "title": "「太陽電池廃棄物の再資源化等の推進に関する法律」の下位法令の策定等に係る検討会（第１回）の開催について",
+      "source_url": "https://www.env.go.jp/press/press_05740.html",
+      "stage_candidate": {
+        "stage_candidate": "DISCUSSION",
+        "trigger": "検討会",
+        "verified": false
+      },
+      "publication_date": null,
+      "publication_date_candidates": [
+        {
+          "value": "2026年10月23日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        },
+        {
+          "value": "令和８年10月30日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        }
+      ],
+      "explicit_date_evidence": [],
+      "review_status": "UNVERIFIED"
+    },
+    {
+      "id": "https://www.env.go.jp/press/109435_00001.html",
+      "title": "第一種動物取扱業者及び第二種動物取扱業者が取り扱う動物の管理の方法等の基準を定める省令の一部を改正する省令の公布等について",
+      "source_url": "https://www.env.go.jp/press/109435_00001.html",
+      "stage_candidate": {
+        "stage_candidate": "PROMULGATION_MENTIONED",
+        "trigger": "公布",
+        "verified": false
+      },
+      "publication_date": null,
+      "publication_date_candidates": [
+        {
+          "value": "2026年10月15日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        }
+      ],
+      "explicit_date_evidence": [
+        {
+          "date": "令和３年４月１日",
+          "type_candidate": "PROMULGATION_DATE_CANDIDATE",
+          "matched_phrase": "令和３年４月１日に公布",
+          "evidence": "者及び第二種動物取扱業者が取り扱う動物の管理の方法等の基準を定める省令（令和３年環境省令第７号。以下「基準省令」という。）として、令和３年４月１日に公布、同年６月１日に施行されました。 改正前の基準省令における規定事項は、改正法の規定を受け、犬と猫に関する飼養管理基準を具体化してい",
+          "verified": false
+        },
+        {
+          "date": "令和９年６月１日",
+          "type_candidate": "ENFORCEMENT_DATE_CANDIDATE",
+          "matched_phrase": "施行期日\n令和９年６月１日",
+          "evidence": "「動物取扱業における犬猫以外の哺乳類の飼養管理基準の細部解釈と運用指針～守るべき基準のポイント～」を策定しました。 ２．基準省令の施行期日 令和９年６月１日 ※飼養施設に備える設備の規模に関する事項については、既存事業者に対する経過措置を規定（令和10 年６月１日から適用）。 添付資料",
+          "verified": false
+        }
+      ],
+      "review_status": "UNVERIFIED"
+    },
+    {
+      "id": "https://www.env.go.jp/press/press_05684.html",
+      "title": "特定外来生物による生態系等に係る被害の防止に関する法律施行令の一部を改正する政令案等に対する意見の募集（パブリック・コメント）について",
+      "source_url": "https://www.env.go.jp/press/press_05684.html",
+      "stage_candidate": {
+        "stage_candidate": "PUBLIC_COMMENT",
+        "trigger": "意見の募集",
+        "verified": false
+      },
+      "publication_date": null,
+      "publication_date_candidates": [
+        {
+          "value": "2026年10月13日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        }
+      ],
+      "explicit_date_evidence": [],
+      "review_status": "UNVERIFIED"
+    },
+    {
+      "id": "https://www.env.go.jp/press/press_05706.html",
+      "title": "公害健康被害の補償等に関する法律の一部を改正する法律案の閣議決定について",
+      "source_url": "https://www.env.go.jp/press/press_05706.html",
+      "stage_candidate": {
+        "stage_candidate": "DRAFT",
+        "trigger": "法律案",
+        "verified": false
+      },
+      "publication_date": null,
+      "publication_date_candidates": [
+        {
+          "value": "2026年10月13日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        }
+      ],
+      "explicit_date_evidence": [
+        {
+          "date": "令和９年４月１日",
+          "type_candidate": "ENFORCEMENT_DATE_CANDIDATE",
+          "matched_phrase": "施行期日\n令和９年４月１日",
+          "evidence": "変化等を踏まえ、遺族補償費を受け取ることができる遺族の範囲を見直し、夫のみに課された年齢要件を撤廃するよう措置するものです。 ３．施行期日 令和９年４月１日 添付資料 【概要】公害健康被害の補償等に関する法律の一部を改正する法律案[PDF 411KB] 【要綱】公害健康被害の補償等に関",
+          "verified": false
+        }
+      ],
+      "review_status": "UNVERIFIED"
+    },
+    {
+      "id": "https://www.env.go.jp/press/press_05649.html",
+      "title": "環境影響評価法施行令の一部を改正する政令の閣議決定等について",
+      "source_url": "https://www.env.go.jp/press/press_05649.html",
+      "stage_candidate": {
+        "stage_candidate": "CABINET_DECISION",
+        "trigger": "閣議決定",
+        "verified": false
+      },
+      "publication_date": null,
+      "publication_date_candidates": [
+        {
+          "value": "2026年10月09日",
+          "evidence": "Near beginning of extracted page (not verified)"
+        }
+      ],
+      "explicit_date_evidence": [],
+      "review_status": "UNVERIFIED"
+    }
+  ],
+  "comparison": {
+    "mode": "NOT_RUN_TEST_INPUT",
+    "new_candidate_ids": [],
+    "unchanged_ids": [],
+    "removed_from_current_list_ids": [],
+    "note": "Input fixture only: v0.7 comparison against previous six-record state should report one removed_from_current_list_id; not a legal repeal determination."
+  },
+  "comparison_kind": "SYNTHETIC_ABSENT_CANDIDATE_INPUT"
+}
