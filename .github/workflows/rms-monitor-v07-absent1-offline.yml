@@ -1,0 +1,62 @@
+name: RMS Monitor v0.7 Absent-One Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  absent-one-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Compare five-record fixture against last successful handoff
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 rms_env_monitor_v07.py \
+            --mode compare \
+            --current rms-env-monitor-v07-absent1-fixture.json \
+            --out-dir v07-absent1-output
+
+      - name: Verify absent-one result and offline safety flags
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path('v07-absent1-output')
+          result = json.loads((base / 'rms-v07-result.json').read_text(encoding='utf-8'))
+          state = json.loads((base / 'rms-v07-state.json').read_text(encoding='utf-8'))
+          missing_id = 'urn:rms-monitor:offline-test:synthetic-new-001'
+          assert result.get('status') == 'COMPARED', 'Comparison status mismatch'
+          assert result.get('comparison_performed') is True, 'Comparison not performed'
+          assert result.get('offline_test') is True, 'Not marked as offline test'
+          assert result.get('legal_change_verified') is False, 'Unexpected legal verification flag'
+          assert result.get('current_count') == 5, 'Current count should be five'
+          assert len(result.get('new_candidate_ids', [])) == 0, 'Unexpected new candidates'
+          assert len(result.get('unchanged_ids', [])) == 5, 'Expected five unchanged candidates'
+          assert result.get('removed_from_current_list_ids') == [missing_id], 'Wrong absent candidate'
+          assert len(state.get('records', [])) == 5, 'Saved state should contain five records'
+          assert state.get('legal_change_verified') is False, 'Saved state marked verified'
+          assert missing_id not in {r['id'] for r in state['records']}, 'Synthetic record was not removed'
+          assert result.get('previous_run_id'), 'Missing source run ID'
+          print(f"PASS: source_run={result['previous_run_id']}, new=0, unchanged=5, absent=1")
+          print('PASS: offline only; missing record is not a legal repeal determination')
+          PY
+
+      - name: Upload isolated absent-one test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-v07-absent1-test-output
+          path: |
+            v07-absent1-output/rms-v07-state.json
+            v07-absent1-output/rms-v07-result.json
+          if-no-files-found: error
+          retention-days: 30
