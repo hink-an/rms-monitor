@@ -1,0 +1,121 @@
+name: RMS Monitor v0.7 Live Candidate ID Comparison Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  compare-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Get the successful integration test number 2 baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/rms-monitor-v05-v07-integration-test.yml/runs?branch=main&event=workflow_dispatch&status=success&per_page=100" --jq '.workflow_runs[] | select(.run_number == 2) | .id')"
+          if [[ ! "$run_id" =~ ^[0-9]+$ ]]; then
+            echo 'FAIL-CLOSED: integration test #2 baseline run not uniquely found' >&2
+            exit 1
+          fi
+          mkdir -p baseline
+          gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name rms-v05-v07-integration-test --dir baseline
+
+      - name: Collect current official candidates with v0.5
+        run: |
+          set -euo pipefail
+          python3 rms_env_monitor_v05.py --output current-live-test.json
+
+      - name: Validate snapshots and compare candidate IDs only
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          base = Path('baseline')
+          prior_path = base / 'v05-v07-test-output' / 'rms-v07-state.json'
+          seed_result_path = base / 'v05-v07-test-output' / 'rms-v07-result.json'
+          old_live_path = base / 'v05-live-test.json'
+          current_path = Path('current-live-test.json')
+
+          def read_json(path):
+              if not path.is_file() or path.stat().st_size > 2_000_000:
+                  raise ValueError(f'FAIL-CLOSED: missing or oversized JSON: {path}')
+              return json.loads(path.read_text(encoding='utf-8-sig'))
+
+          def ids_of(data, label):
+              if type(data) is not dict or type(data.get('schema_version')) is not int or data['schema_version'] != 1:
+                  raise ValueError(f'FAIL-CLOSED: bad schema: {label}')
+              if data.get('legal_change_verified') is not False:
+                  raise ValueError(f'FAIL-CLOSED: unsafe verification flag: {label}')
+              if data.get('source_list') != 'https://www.env.go.jp/press/':
+                  raise ValueError(f'FAIL-CLOSED: unexpected source: {label}')
+              records = data.get('records')
+              if type(records) is not list or not 1 <= len(records) <= 10:
+                  raise ValueError(f'FAIL-CLOSED: invalid candidate count: {label}')
+              ids = set()
+              for record in records:
+                  if type(record) is not dict or record.get('review_status') != 'UNVERIFIED':
+                      raise ValueError(f'FAIL-CLOSED: unverified record required: {label}')
+                  rid, url, title = (record.get(k) for k in ('id', 'source_url', 'title'))
+                  if any(type(v) is not str or not v.strip() for v in (rid, url, title)):
+                      raise ValueError(f'FAIL-CLOSED: missing record field: {label}')
+                  parsed = urlsplit(url)
+                  if (rid != url or parsed.scheme != 'https' or parsed.netloc != 'www.env.go.jp'
+                          or not parsed.path.startswith('/press/') or parsed.username is not None):
+                      raise ValueError(f'FAIL-CLOSED: unsafe record URL: {label}')
+                  if rid in ids:
+                      raise ValueError(f'FAIL-CLOSED: duplicate ID: {label}')
+                  ids.add(rid)
+              return ids
+
+          prior = read_json(prior_path)
+          old_live = read_json(old_live_path)
+          seed_result = read_json(seed_result_path)
+          current = read_json(current_path)
+          old_ids = ids_of(prior, 'prior state')
+          if prior != old_live or len(old_ids) != 6:
+              raise ValueError('FAIL-CLOSED: baseline is not the verified six-record handoff')
+          if (seed_result.get('status') != 'BASELINE_CREATED'
+                  or seed_result.get('comparison_performed') is not False
+                  or seed_result.get('legal_change_verified') is not False
+                  or seed_result.get('current_count') != 6):
+              raise ValueError('FAIL-CLOSED: seed result does not match the baseline')
+          new_ids = ids_of(current, 'current collection')
+          result = {
+              'test_only': True,
+              'comparison_kind': 'standalone_candidate_id_comparison_not_v07_compare_mode',
+              'legal_change_verified': False,
+              'coverage': 'INCOMPLETE',
+              'baseline_count': len(old_ids),
+              'current_count': len(new_ids),
+              'new_candidate_ids': sorted(new_ids - old_ids),
+              'unchanged_ids': sorted(new_ids & old_ids),
+              'removed_from_current_list_ids': sorted(old_ids - new_ids),
+              'note': 'An absent press-list candidate is not evidence that a law was repealed.'
+          }
+          output = Path('candidate-id-compare-result.json')
+          if output.exists():
+              raise ValueError('FAIL-CLOSED: output file already exists')
+          output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('PASS: candidate-ID-only comparison; no legal decision')
+          print(f'baseline={len(old_ids)} current={len(new_ids)} new={len(new_ids-old_ids)} unchanged={len(new_ids&old_ids)} absent={len(old_ids-new_ids)}')
+          PY
+
+      - name: Upload isolated comparison evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-v07-live-candidate-compare-test
+          path: |
+            current-live-test.json
+            candidate-id-compare-result.json
+          if-no-files-found: error
+          retention-days: 7
