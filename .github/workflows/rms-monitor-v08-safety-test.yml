@@ -1,0 +1,20 @@
+name: RMS Monitor v0.8 Offline Safety Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  safety-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run v0.8 offline safety tests
+        run: |
+          python3 -m unittest -v test_rms_env_monitor_v08.py
