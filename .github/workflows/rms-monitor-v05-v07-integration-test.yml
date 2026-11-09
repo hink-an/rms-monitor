@@ -1,0 +1,116 @@
+name: RMS Monitor v0.5-v0.7 Integration Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Collect official information with v0.5
+        run: |
+          python3 rms_env_monitor_v05.py \
+            --output v05-live-test.json
+
+      - name: Validate collected JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          path = Path("v05-live-test.json")
+
+          if not path.is_file():
+              raise SystemExit("FAIL-CLOSED: JSON file missing")
+
+          if path.stat().st_size > 2000000:
+              raise SystemExit("FAIL-CLOSED: JSON too large")
+
+          try:
+              data = json.loads(path.read_text(encoding="utf-8-sig"))
+          except (ValueError, UnicodeError):
+              raise SystemExit("FAIL-CLOSED: Invalid JSON")
+
+          if not isinstance(data, dict):
+              raise SystemExit("FAIL-CLOSED: Invalid structure")
+
+          if type(data.get("schema_version")) is not int or data["schema_version"] != 1:
+              raise SystemExit("FAIL-CLOSED: Schema mismatch")
+
+          if data.get("legal_change_verified") is not False:
+              raise SystemExit("FAIL-CLOSED: Verification flag unsafe")
+
+          if data.get("source_list") != "https://www.env.go.jp/press/":
+              raise SystemExit("FAIL-CLOSED: Unexpected source")
+
+          records = data.get("records")
+
+          if not isinstance(records, list):
+              raise SystemExit("FAIL-CLOSED: Records missing")
+
+          if not 1 <= len(records) <= 10:
+              raise SystemExit("FAIL-CLOSED: Unexpected record count")
+
+          ids = set()
+
+                    for record in records:
+              if not isinstance(record, dict):
+                  raise SystemExit("FAIL-CLOSED: Invalid record")
+
+              record_id = record.get("id")
+              url = record.get("source_url")
+              title = record.get("title")
+
+              if not all(isinstance(v, str) and v.strip()
+                         for v in (record_id, url, title)):
+                  raise SystemExit("FAIL-CLOSED: Missing record field")
+
+              parsed = urlsplit(url)
+
+              if (parsed.scheme != "https" or
+                  parsed.netloc != "www.env.go.jp" or
+                  not parsed.path.startswith("/press/")):
+                  raise SystemExit("FAIL-CLOSED: Invalid source URL")
+
+              if record_id != url:
+                  raise SystemExit("FAIL-CLOSED: ID mismatch")
+
+              if record_id in ids:
+                  raise SystemExit("FAIL-CLOSED: Duplicate ID")
+
+              ids.add(record_id)
+
+              if record.get("review_status") != "UNVERIFIED":
+                  raise SystemExit("FAIL-CLOSED: Unsafe review status")
+
+          print("PASS: Collected JSON passed safety checks")
+          print(f"Candidates: {len(records)}")
+          print("Coverage: INCOMPLETE / TEST ONLY")
+          PY
+
+      - name: Run v0.7 seed test
+        run: |
+          python3 rms_env_monitor_v07.py \
+            --mode seed \
+            --current v05-live-test.json \
+            --out-dir v05-v07-test-output
+
+      - name: Upload isolated test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-v05-v07-integration-test
+          path: |
+            v05-live-test.json
+            v05-v07-test-output/rms-v07-state.json
+            v05-v07-test-output/rms-v07-result.json
+          if-no-files-found: error
+          retention-days: 7
