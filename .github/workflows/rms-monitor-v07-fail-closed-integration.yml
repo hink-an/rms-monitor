@@ -1,0 +1,55 @@
+name: RMS Monitor v0.7 Fail-Closed Integration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Test actual Fail-Closed behavior
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p fail-closed-test
+          printf '{invalid json\n' > fail-closed-test/invalid.json
+
+          set +e
+          python3 rms_env_monitor_v07.py \
+            --mode seed \
+            --current fail-closed-test/invalid.json \
+            --out-dir fail-closed-test/output \
+            > fail-closed-test/stdout.log \
+            2> fail-closed-test/stderr.log
+          exit_code=$?
+          set -e
+
+          echo "Exit code: $exit_code"
+          cat fail-closed-test/stderr.log
+
+          if [ "$exit_code" -eq 0 ]; then
+            echo "FAIL: Invalid JSON was accepted"
+            exit 1
+          fi
+
+          if ! grep -q 'FAIL-CLOSED:' fail-closed-test/stderr.log; then
+            echo "FAIL: Expected FAIL-CLOSED message was not found"
+            exit 1
+          fi
+
+          if [ -f fail-closed-test/output/rms-v07-result.json ] ||
+             [ -f fail-closed-test/output/rms-v07-state.json ]; then
+            echo "FAIL: Output JSON was created despite invalid input"
+            exit 1
+          fi
+
+          echo "PASS: Invalid JSON was rejected safely"
