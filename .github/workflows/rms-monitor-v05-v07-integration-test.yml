@@ -62,7 +62,7 @@ jobs:
 
           ids = set()
 
-                    for record in records:
+          for record in records:
               if not isinstance(record, dict):
                   raise SystemExit("FAIL-CLOSED: Invalid record")
 
@@ -72,7 +72,7 @@ jobs:
 
               if not all(isinstance(v, str) and v.strip()
                          for v in (record_id, url, title)):
-                  raise SystemExit("FAIL-CLOSED: Missing record field")
+                    raise SystemExit("FAIL-CLOSED: Missing record field")
 
               parsed = urlsplit(url)
 
