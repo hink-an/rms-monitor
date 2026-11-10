@@ -1,0 +1,64 @@
+name: RMS Monitor Diagnostic v0.1 Live Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic-live-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Diagnose official Environment Ministry page
+        id: diagnostic
+        shell: bash
+        run: |
+          mkdir -p diagnostic-output
+          set +e
+          python3 rms_env_diagnostic_v01.py \
+            --url https://www.env.go.jp/press/ \
+            --output diagnostic-output/rms-env-diagnostic-live.json
+          code=$?
+          set -e
+          echo "diagnostic_exit_code=$code" >> "$GITHUB_OUTPUT"
+          echo "Diagnostic process exit code: $code (HOLD/FAIL may be expected)."
+
+      - name: Verify report is safe and readable
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report_path = Path('diagnostic-output/rms-env-diagnostic-live.json')
+          if not report_path.is_file():
+              raise SystemExit('ERROR: Diagnostic report missing')
+          report = json.loads(report_path.read_text(encoding='utf-8'))
+          if report.get('diagnostic_status') not in {'PASS', 'HOLD', 'FAIL'}:
+              raise SystemExit('ERROR: Unexpected diagnostic status')
+          if report.get('comparison_allowed') is not False:
+              raise SystemExit('ERROR: Comparison must remain prohibited')
+          if report.get('complete_collection_verified') is not False:
+              raise SystemExit('ERROR: Completeness must remain unverified')
+          if report.get('rms_modified') is not False:
+              raise SystemExit('ERROR: RMS modification flag must be false')
+          print('Diagnostic:', report['diagnostic_status'])
+          print('Comparison allowed: false')
+          print('Complete collection verified: false')
+          print('Report validated. No comparison or RMS update invoked.')
+          PY
+
+      - name: Upload diagnostic report (independent artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-diagnostic-v01-live-${{ github.run_id }}
+          path: diagnostic-output/rms-env-diagnostic-live.json
+          if-no-files-found: warn
+          retention-days: 14
