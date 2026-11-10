@@ -1,0 +1,66 @@
+name: RMS Monitor Diagnostic v0.1 Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic-offline-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+
+      - name: Run isolated offline safety checks
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+
+          script = Path('rms_env_diagnostic_v01.py').resolve()
+          assert script.is_file(), 'Diagnostic script missing'
+
+          def check_case(folder, label, content, expected_status):
+              html_path = folder / (label + '.html')
+              json_path = folder / (label + '.json')
+              html_path.write_bytes(content)
+              proc = subprocess.run(
+                  [sys.executable, str(script), '--offline-html', str(html_path),
+                   '--output', str(json_path)],
+                  capture_output=True, text=True, timeout=45,
+              )
+              assert proc.returncode == 1, (label, proc.returncode, proc.stdout, proc.stderr)
+              data = json.loads(json_path.read_text(encoding='utf-8'))
+              assert data['diagnostic_status'] == expected_status, (label, data)
+              assert data['comparison_allowed'] is False, label
+              assert data['complete_collection_verified'] is False, label
+              assert data['rms_modified'] is False, label
+              assert data['mode'] == 'offline', label
+              print('PASS:', label, 'status=' + expected_status)
+              return html_path, json_path
+
+          with tempfile.TemporaryDirectory() as tmp:
+              folder = Path(tmp)
+              valid_html = (b'<html><head><title>Sample</title></head><body>'
+                            b'<a href="/press/example">Example</a></body></html>')
+              html_path, json_path = check_case(folder, 'valid', valid_html, 'HOLD')
+              check_case(folder, 'empty', b'', 'FAIL')
+              check_case(folder, 'invalid_utf8', b'<html><body>\xff</body></html>', 'FAIL')
+              check_case(folder, 'oversize', b'A' * (2 * 1024 * 1024 + 1), 'FAIL')
+              duplicate = subprocess.run(
+                  [sys.executable, str(script), '--offline-html', str(html_path),
+                   '--output', str(json_path)],
+                  capture_output=True, text=True, timeout=45,
+              )
+              assert duplicate.returncode == 2, (duplicate.returncode, duplicate.stderr)
+              print('PASS: existing JSON is not overwritten')
+
+          print('All offline diagnostic safety checks passed.')
+          PY
