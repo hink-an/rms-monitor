@@ -1,0 +1,102 @@
+name: RMS Monitor Link Analysis v0.1 Offline Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-analysis-offline-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Run isolated offline checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import subprocess
+          import sys
+          from tempfile import TemporaryDirectory
+          
+          script = Path('rms_env_link_analysis_v01.py').resolve()
+          assert script.is_file(), 'Missing link-analysis script'
+          
+          def invoke(html_file, json_file):
+              return subprocess.run(
+                  [sys.executable, str(script), '--offline-html', str(html_file), '--output', str(json_file)],
+                  capture_output=True, text=True, timeout=15, check=False,
+              )
+          
+          with TemporaryDirectory() as tmp:
+              root = Path(tmp)
+              sample = root / 'sample.html'
+              output = root / 'result.json'
+              sample.write_text('''<!doctype html><html><body>
+              <a href="/press/123.html">法令改正のお知らせ</a>
+              <a href="/press/123.html">法令改正のお知らせ（重複）</a>
+              <a href="/press/456.html">環境施策に関する発表</a>
+              <a href="/press/archive/">過去の記事一覧</a>
+              <a href="/about/">環境省について</a>
+              <a href="https://example.org/press/999.html">外部サイト</a>
+              </body></html>''', encoding='utf-8')
+              result = invoke(sample, output)
+              assert result.returncode == 0, (result.stdout, result.stderr)
+              data = json.loads(output.read_text(encoding='utf-8'))
+              counts = data['counts']
+              assert counts['all_anchor_elements_closed'] == 6, counts
+              assert counts['press_links_total'] == 4, counts
+              assert counts['press_unique'] == 3, counts
+              assert counts['press_duplicate_occurrences'] == 1, counts
+              assert counts['press_unique_keyword_match'] == 1, counts
+              assert counts['press_unique_keyword_no_match'] == 2, counts
+              assert counts['article_shape_unverified_unique'] == 2, counts
+              assert counts['press_other_or_unknown_unique'] == 1, counts
+              assert counts['legacy_10_limit_reached_proxy'] is False, counts
+              assert data['diagnostic_status'] == 'HOLD'
+              assert data['comparison_allowed'] is False
+              assert data['complete_collection_verified'] is False
+              assert data['legal_amendment_confirmed'] is False
+              assert data['rms_modified'] is False
+              print('PASS: classification, keywords, duplicate detection and safety flags')
+              
+              empty = root / 'empty.html'
+              empty.write_bytes(b'')
+              empty_report = root / 'empty.json'
+              r = invoke(empty, empty_report)
+              assert r.returncode != 0 and not empty_report.exists()
+              assert 'FAIL-CLOSED:' in r.stderr
+              print('PASS: empty HTML fails closed')
+              
+              bad = root / 'invalid.html'
+              bad.write_bytes(b'\xff\xfe')
+              bad_report = root / 'invalid.json'
+              r = invoke(bad, bad_report)
+              assert r.returncode != 0 and not bad_report.exists()
+              assert 'FAIL-CLOSED:' in r.stderr
+              print('PASS: invalid UTF-8 fails closed')
+              
+              oversized = root / 'oversized.html'
+              oversized.write_bytes(b'a' * (2 * 1024 * 1024 + 1))
+              oversized_report = root / 'oversized.json'
+              r = invoke(oversized, oversized_report)
+              assert r.returncode != 0 and not oversized_report.exists()
+              assert 'FAIL-CLOSED:' in r.stderr
+              print('PASS: over-2MB input fails closed')
+              
+              original = output.read_bytes()
+              r = invoke(sample, output)
+              assert r.returncode != 0 and output.read_bytes() == original
+              assert 'FAIL-CLOSED:' in r.stderr
+              print('PASS: existing JSON is not overwritten')
+          
+          print('All offline link-analysis safety checks passed.')
+          PY
