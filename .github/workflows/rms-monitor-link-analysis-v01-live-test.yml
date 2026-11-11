@@ -1,0 +1,169 @@
+name: RMS Monitor Link Analysis v0.1 Live Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-analysis-live-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository without credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Capture official HTML with strict limits (read-only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p link-analysis-output
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          URL = 'https://www.env.go.jp/press/'
+          MAX_BYTES = 2 * 1024 * 1024
+          OUT = Path('link-analysis-output')
+          manifest = {
+              'requested_url': URL,
+              'checked_at_utc': datetime.now(timezone.utc).isoformat(),
+              'capture_status': 'FAIL',
+              'comparison_allowed': False,
+              'complete_collection_verified': False,
+              'rms_modified': False,
+          }
+
+          class RestrictedRedirect(urllib.request.HTTPRedirectHandler):
+              def __init__(self):
+                  self.count = 0
+                  super().__init__()
+
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  self.count += 1
+                  target = urllib.parse.urlsplit(newurl)
+                  if (self.count > 3 or target.scheme != 'https'
+                          or target.hostname != 'www.env.go.jp'
+                          or target.port not in (None, 443)
+                          or target.username is not None or target.password is not None):
+                      raise ValueError('REDIRECT_NOT_ALLOWED')
+                  return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+          try:
+              redirect = RestrictedRedirect()
+              opener = urllib.request.build_opener(redirect)
+              req = urllib.request.Request(URL, headers={
+                  'User-Agent': 'RMS-Monitor-Link-Analysis/0.1 (read-only)',
+                  'Accept': 'text/html',
+                  'Accept-Encoding': 'identity',
+              })
+              with opener.open(req, timeout=30) as res:
+                  status = res.status
+                  final_url = res.geturl()
+                  mime = res.headers.get_content_type().lower()
+                  encoding = res.headers.get('Content-Encoding', 'identity').lower().strip()
+                  manifest.update(http_status=status, final_url=final_url,
+                                  content_type=res.headers.get('Content-Type', ''),
+                                  redirect_count=redirect.count)
+                  final = urllib.parse.urlsplit(final_url)
+                  if (final.scheme != 'https' or final.hostname != 'www.env.go.jp'
+                          or final.port not in (None, 443)
+                          or final.username is not None or final.password is not None):
+                      raise ValueError('FINAL_URL_NOT_ALLOWED')
+                  if status != 200:
+                      raise ValueError('UNEXPECTED_HTTP_STATUS')
+                  if mime != 'text/html':
+                      raise ValueError('UNEXPECTED_CONTENT_TYPE')
+                  if encoding not in ('', 'identity'):
+                      raise ValueError('UNSUPPORTED_CONTENT_ENCODING')
+                  announced = res.headers.get('Content-Length')
+                  if announced is not None and int(announced) > MAX_BYTES:
+                      raise ValueError('DECLARED_HTML_TOO_LARGE')
+                  raw = res.read(MAX_BYTES + 1)
+                  if len(raw) > MAX_BYTES:
+                      raise ValueError('HTML_SIZE_LIMIT_EXCEEDED')
+                  if announced is not None and int(announced) != len(raw):
+                      raise ValueError('CONTENT_LENGTH_MISMATCH')
+                  html = raw.decode('utf-8', errors='strict')
+                  lowered = html.lower()
+                  if not html.strip() or '<html' not in lowered or '<body' not in lowered:
+                      raise ValueError('BASIC_HTML_STRUCTURE_INVALID')
+                  manifest.update(capture_status='CAPTURED_UNVERIFIED',
+                                  html_bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
+                  (OUT / 'env-press-captured.html').write_bytes(raw)
+          except (OSError, ValueError, UnicodeError, urllib.error.URLError) as exc:
+              manifest['error_type'] = type(exc).__name__
+              # Avoid printing raw server response content or secrets to logs.
+              print('FAIL-CLOSED: Official HTML capture was rejected:', type(exc).__name__, file=sys.stderr)
+              raise_code = 1
+          else:
+              print('Captured HTML bytes:', manifest['html_bytes'])
+              print('Capture is not evidence of completeness; comparison stays forbidden.')
+              raise_code = 0
+          finally:
+              (OUT / 'capture-manifest.json').write_text(
+                  json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          sys.exit(raise_code)
+          PY
+
+      - name: Analyze the captured HTML (offline program only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 rms_env_link_analysis_v01.py \
+            --offline-html link-analysis-output/env-press-captured.html \
+            --output link-analysis-output/env-press-link-analysis.json
+
+      - name: Validate analysis is read-only and comparison is forbidden
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          root = Path('link-analysis-output')
+          manifest = json.loads((root / 'capture-manifest.json').read_text(encoding='utf-8'))
+          report = json.loads((root / 'env-press-link-analysis.json').read_text(encoding='utf-8'))
+          raw = (root / 'env-press-captured.html').read_bytes()
+          assert manifest['capture_status'] == 'CAPTURED_UNVERIFIED'
+          assert manifest['sha256'] == hashlib.sha256(raw).hexdigest()
+          assert manifest['html_bytes'] == len(raw)
+          assert report['html_bytes'] == len(raw)
+          assert report['mode'] == 'offline'
+          assert report['diagnostic_status'] == 'HOLD'
+          assert report['comparison_allowed'] is False
+          assert report['complete_collection_verified'] is False
+          assert report['legal_amendment_confirmed'] is False
+          assert report['rms_modified'] is False
+          assert manifest['comparison_allowed'] is False
+          assert manifest['complete_collection_verified'] is False
+          assert manifest['rms_modified'] is False
+          print('Validation PASS; no comparison or RMS update permitted.')
+          print('Unique press links:', report['counts']['press_unique'])
+          print('Keyword-matched unique press links (approx.):',
+                report['counts']['press_unique_keyword_match'])
+          print('Legacy ten-link limit risk (proxy):',
+                report['counts']['legacy_10_limit_reached_proxy'])
+          PY
+
+      - name: Upload isolated HTML and JSON for human review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-env-link-analysis-v01-live-${{ github.run_id }}
+          path: |
+            link-analysis-output/capture-manifest.json
+            link-analysis-output/env-press-captured.html
+            link-analysis-output/env-press-link-analysis.json
+          if-no-files-found: error
+          retention-days: 14
