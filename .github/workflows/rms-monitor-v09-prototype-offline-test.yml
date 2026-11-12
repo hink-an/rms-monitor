@@ -1,0 +1,33 @@
+name: RMS Monitor v0.9 Prototype Offline Safety Test
+
+"on":
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  v09-prototype-offline-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Verify Python syntax
+        run: |
+          python3 - <<'PY'
+          import ast
+          from pathlib import Path
+          for name in ('rms_env_collector_v09_prototype.py', 'test_rms_env_collector_v09_prototype.py'):
+              ast.parse(Path(name).read_text(encoding='utf-8'), filename=name)
+              print('PASS: syntax:', name)
+          PY
+
+      - name: Run isolated offline safety tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 -m unittest -v test_rms_env_collector_v09_prototype.py
