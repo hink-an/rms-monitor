@@ -1,0 +1,25 @@
+name: RMS Monitor v0.9 Live Probe Offline Safety Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  v09-live-probe-offline-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+
+      - name: Verify Python syntax
+        run: |
+          python3 -m py_compile rms_env_live_probe_v09.py
+          python3 -m py_compile test_rms_env_live_probe_v09.py
+
+      - name: Run isolated offline safety tests
+        run: |
+          python3 -m unittest -v test_rms_env_live_probe_v09.py
