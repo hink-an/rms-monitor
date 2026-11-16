@@ -1,0 +1,81 @@
+name: RMS Monitor v0.9 Live Probe Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  v09-live-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository (read-only)
+        uses: actions/checkout@v4
+
+      - name: Verify Python syntax
+        run: |
+          python3 -m py_compile rms_env_live_probe_v09.py
+
+      - name: Run read-only live probe
+        shell: bash
+        run: |
+          set +e
+          python3 rms_env_live_probe_v09.py \
+            --live \
+            --output rms-v09-live-probe-report.json
+          result=$?
+          set -e
+
+          echo "Probe exit code: $result"
+
+          if [ "$result" -ne 1 ]; then
+            echo "FAIL: Expected HOLD exit code 1"
+            exit 1
+          fi
+
+          if [ ! -f rms-v09-live-probe-report.json ]; then
+            echo "FAIL: Report not created"
+            exit 1
+          fi
+
+      - name: Verify HOLD and safety conditions
+        run: |
+          python3 - <<'PY'
+          import json
+
+          with open("rms-v09-live-probe-report.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          assert data["tool"] == "rms_env_live_probe_v09"
+          assert data["mode"] == "LIVE_SINGLE_PAGE"
+          assert data["source_url"] == "https://www.env.go.jp/press/"
+          assert data["diagnostic_status"] == "HOLD"
+          assert data["comparison_allowed"] is False
+          assert data["complete_collection_verified"] is False
+          assert data["legal_amendment_confirmed"] is False
+          assert data["rms_modified"] is False
+          assert data["network_fetch_article_bodies"] is False
+          assert data["candidate_limit"] == 100
+          assert data["article_shape_candidates"] > 0
+          assert data["article_shape_candidates"] == len(data["candidate_inventory"])
+          assert data["limit_exceeded"] is (data["article_shape_candidates"] > 100)
+          assert data["over_limit_count"] == max(0, data["article_shape_candidates"] - 100)
+          assert sum(data["queue_counts"].values()) == data["article_shape_candidates"]
+
+          print("Safety conditions: VERIFIED")
+          print("Diagnostic: HOLD")
+          print("Candidates:", data["article_shape_candidates"])
+          print("Limit exceeded:", data["limit_exceeded"])
+          print("Comparison allowed: false")
+          PY
+
+      - name: Upload investigative report
+        uses: actions/upload-artifact@v4
+        with:
+          name: rms-v09-live-probe-investigative-report
+          path: rms-v09-live-probe-report.json
+          if-no-files-found: error
+          retention-days: 7
