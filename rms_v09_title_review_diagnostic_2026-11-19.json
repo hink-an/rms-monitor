@@ -1,0 +1,4504 @@
+{
+  "tool": "rms_v09_title_review_prototype_v01",
+  "created_at_utc": "2026-11-19T04:37:48.107759+00:00",
+  "source_tool": "rms_v09_offline_inventory_classifier_v01",
+  "source_created_at_utc": "2026-11-19T04:34:40.000374+00:00",
+  "original_candidate_count": 477,
+  "article_candidate_count": 114,
+  "manual_review_required_count": 114,
+  "no_signal_count": 72,
+  "review_signal_counts_overlapping": {
+    "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW": 22,
+    "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW": 25,
+    "POSSIBLE_LEGAL_CHANGE_REVIEW": 8,
+    "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW": 7
+  },
+  "all_candidates": [
+    {
+      "url": "https://www.env.go.jp/press/index.html",
+      "title": "報道発表一覧",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "INDEX_TOP",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05854.html",
+      "title": "「リチウムイオン電池等の処理施設リスト」掲載希望処理施設の公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05844.html",
+      "title": "「自治体向け衣類回収ガイドラインに関する検討会」（第２回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05828.html",
+      "title": "令和８年度環境配慮契約法基本方針検討会(第２回)の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05853.html",
+      "title": "東アジア酸性雨モニタリングネットワーク（EANET）第28回政府間会合（IG28）及びEANET設立25周年記念式典の開催について（お知らせ）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05825.html",
+      "title": "令和８年度「環境スタートアップ大賞」の募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05851.html",
+      "title": "令和８年度気候変動アクション環境大臣表彰～受賞者決定と表彰式・受賞者フォーラム開催のお知らせ～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05827.html",
+      "title": "石綿健康被害判定小委員会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05838.html",
+      "title": "SEMICON Japan 2026における「次世代半導体GaNの挑戦」セミナーの開催及び出展について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05821.html",
+      "title": "令和８年度「体験の機会の場」と連携した教職員等環境教育・学習推進リーダー養成研修の開催～「循環型社会を支える現場から学ぶ環境教育」③－循環型社会と生物多様性を結ぶ環境教育リーダー育成－～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05819.html",
+      "title": "「廃棄物・資源循環分野のフィジカルAIコンソーシアム」の設立と会員の募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/110930_00007.html",
+      "title": "令和８年度国立公園等資源整備事業費補助金（エコツーリズムを通じた地域の魅力向上事業）（三次公募）の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05834.html",
+      "title": "廃棄物処理法・バーゼル法に基づく輸出入基準に係る技術的事項検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05859.html",
+      "title": "「温室効果ガス算定排出量等の報告等に関する命令第一条第五号に規定する環境大臣及び経済産業大臣が定める国内認証排出削減量の一部を改正する件（案）」等に対する意見募集（パブリックコメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05847.html",
+      "title": "令和８年度特定外来生物防除等対策事業（交付金）の追加公募（二次公募）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05815.html",
+      "title": "（仮称）伊佐・えびの・人吉風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05803.html",
+      "title": "「絶滅のおそれのある野生動植物の種の保存につき講ずべき措置について（答申案）」に対する意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05793.html",
+      "title": "絶滅のおそれのある野生動植物の種の保存に関する法律に基づく生息地等保護区及び管理地区の指定案に関する公告及び意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05818.html",
+      "title": "令和8年度第1回エコチル調査企画評価委員会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05813.html",
+      "title": "【公募期間延長】令和８年度予算「業務用建築物の脱炭素改修加速化事業」の公募開始について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05826.html",
+      "title": "第５回トキと共生する里地づくりネットワーク協議会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05814.html",
+      "title": "「令和８年度 第１回生物多様性影響評価検討会総合検討会」の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05822.html",
+      "title": "令和８年度化学物質の内分泌かく乱作用に関する公開セミナーの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/104293_00006.html",
+      "title": "「人とペットの災害対策ガイドライン」の改訂等に係る検討会（第５回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05782.html",
+      "title": "気候変動リスク産官学連携ネットワーク公開シンポジウム開催について ～気候関連開示からレジリエンス強化への実践～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05634.html",
+      "title": "日・インド間の二国間クレジット制度（JCM）の詳細規則（Operational Manual）を策定しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05800.html",
+      "title": "水辺の環境活動プラットフォーム・第２回オンライン会合の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00103.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陽性確定 北海道音更町（野鳥国内２例目））",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05804.html",
+      "title": "令和８年度環境配慮契約法基本方針検討会 電力専門委員会(第２回)の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05786.html",
+      "title": "「令和８年度工場・事業場における脱炭素セミナー」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05805.html",
+      "title": "化学物質に関するグローバル枠組み（GFC） 第１回国際会議（IC1）の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/110729_00040.html",
+      "title": "公害健康被害補償不服審査会の裁決について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05789.html",
+      "title": "（仮称）下筌・松原揚水発電所新設計画に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05824.html",
+      "title": "ベトナム社会主義共和国農業環境省との環境協力に関する協力覚書の署名について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00087.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陽性確定 秋田県由利本荘市（野鳥国内１例目））",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05808.html",
+      "title": "2026年度CDP水セキュリティ・環境省共催セミナーの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05798.html",
+      "title": "「廃棄物発電由来エネルギーの地域内利活用に関する情報交換会（近畿）」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05795.html",
+      "title": "プラスチック Good Reduce Practice 2026 ～ワンウェイプラスチック排出抑制に資する優良な取組を募集します～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05741.html",
+      "title": "「太陽電池廃棄物の再資源化等の推進に関する法律」の下位法令の策定等に係る検討会（第２回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05801.html",
+      "title": "地域循環共生圏フォーラム2026「みんなで育てる、しなやかな地域 ～環境・社会・経済のレジリエンス～」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05764.html",
+      "title": "交通政策審議会第101回港湾分科会に係る港湾計画に対する環境省意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05751.html",
+      "title": "令和８年秋の叙勲受章者について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111120_00010.html",
+      "title": "令和８年度カワウの保護及び管理に関する検討会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05794.html",
+      "title": "中央環境審議会地球環境部会気候変動影響評価・適応小委員会（第11回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111111_00045.html",
+      "title": "石綿救済法に基づく指定疾病の認定に係る医学的判定結果について",
+      "original_queue": "FORMAL_REVIEW_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05807.html",
+      "title": "「GTF グリーンチャレンジデー2026 in 新宿御苑」 を開催します",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05806.html",
+      "title": "第269回中央環境審議会環境保健部会化学物質審査小委員会等合同会合の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05696.html",
+      "title": "生物多様性条約第17回締約国会議（CBD-COP17）、カルタヘナ議定書第12回締約国会合（CP-MOP12）及び名古屋議定書第６回締約国会合（NP-MOP6）の結果概要について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05748.html",
+      "title": "令和８年秋の褒章受章者について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00083.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陰性確定、宮城県栗原市）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05779.html",
+      "title": "「空港における脱炭素化促進事業」及び「港湾における脱炭素化促進事業」の公募期間延長について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05775.html",
+      "title": "中央環境審議会循環型社会部会第２回食品リサイクル小委員会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05755.html",
+      "title": "中央環境審議会水環境・土壌農薬部会土壌制度小委員会（第10回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05720.html",
+      "title": "地域生物多様性増進法に基づく「自然共生サイト」の認定 （令和８年度第２回）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05772.html",
+      "title": "全国のニホンジカ及びイノシシの個体数推定等の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05771.html",
+      "title": "（仮称）田原中山風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05770.html",
+      "title": "放射性物質汚染対処特別措置法に基づく汚染状況重点調査地域の指定の解除について",
+      "original_queue": "FORMAL_REVIEW_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05769.html",
+      "title": "（仮称）銚子市沖洋上風力発電事業に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05760.html",
+      "title": "（仮称）北海道厚田風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05753.html",
+      "title": "令和８年度自然歩道関係功労者表彰について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05664.html",
+      "title": "2030生物多様性枠組実現日本会議（J-GBF）第６回ビジネスフォーラムの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05757.html",
+      "title": "第45回温泉関係功労者表彰について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05783.html",
+      "title": "令和８年度市街地等におけるクマ対策に係る技術導入実証事業の実施団体の決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05777.html",
+      "title": "「令和８年度ネイチャーファイナンス実践モデル事業」の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05776.html",
+      "title": "明治安田Ｊ２リーグ ブラウブリッツ秋田、ヴァンフォーレ甲府、モンテディオ山形ホームゲームにおけるリチウムイオン電池等周知啓発イベントの実施について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05774.html",
+      "title": "令和８年度小型家電リサイクル制度の普及啓発イベント実施のお知らせ（後期）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05665.html",
+      "title": "「ネイチャーポジティブ経営推進プラットフォーム」オンライン交流会開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05653.html",
+      "title": "「令和８年度調達におけるネイチャーポジティブに向けた実践モデル事業～課題の掘り起こし及び改善に向けて～」の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05773.html",
+      "title": "令和７年度補正予算循環型社会形成推進事業費補助金（自動車における再生材市場構築のための官学連携推進事業）の二次公募の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00070.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （疑い事例、宮城県栗原市）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05778.html",
+      "title": "「動物園を起点とした消費者の行動変容に向けた意見交換会」開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05761.html",
+      "title": "令和８年度グリーンスローモビリティ等導入促進事業の三次公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05758.html",
+      "title": "遺伝子組換え生ワクチン（犬用）の第一種使用等に関する承認に先立っての意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05756.html",
+      "title": "有明海・八代海等総合調査評価委員会 水産資源再生方策検討作業小委員会（第22回）及び 海域環境再生方策検討作業小委員会（第22回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_01660.html",
+      "title": "第９回日本・シンガポール環境政策対話の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05768.html",
+      "title": "令和８年度脱炭素型循環経済システム構築促進事業 （うち、プラスチック等資源循環システム構築実証事業）（委託） の公募結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05749.html",
+      "title": "令和８年度支障除去等に対する支援のあり方検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05717.html",
+      "title": "美野原カントリークラブ特別高圧太陽光発電所計画に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111227_00001.html",
+      "title": "令和8年度「脱炭素×復興まちづくり」実証事業の採択決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05710.html",
+      "title": "2026年度環境省LD-Techリスト（案）及び水準表（案）の 意見募集について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05784.html",
+      "title": "環境省が関わるメールマガジンにおける配信先情報の漏えいの可能性について（11月11日追記修正）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05740.html",
+      "title": "「太陽電池廃棄物の再資源化等の推進に関する法律」の下位法令の策定等に係る検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05737.html",
+      "title": "令和８年度「体験の機会の場」と連携した教職員等環境教育・学習推進リーダー養成研修の開催～「循環型社会を支える現場から学ぶ環境教育」②－ごみが資源へ生まれ変わる仕組みと循環型社会の実践－～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05723.html",
+      "title": "「良好な環境創出シンポジウム2026」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05719.html",
+      "title": "第23回パリ協定６条４項監督機関会合に参加しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05728.html",
+      "title": "福島の環境再生に向けた復興再生土の利用等の環境省の取組についてのパネルディスカッションについて",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05727.html",
+      "title": "釧路湿原国立公園の公園区域及び公園計画の変更［第２次点検］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05731.html",
+      "title": "中央環境審議会第22回水環境・土壌農薬部会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05730.html",
+      "title": "中央環境審議会第26回大気・騒音振動部会及び第21回水環境・土壌農薬部会の合同開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05725.html",
+      "title": "気候変動に関する政府間パネル（IPCC）第65回総会の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111264_00014.html",
+      "title": "令和８年度二酸化炭素排出抑制対策事業費等補助金（地域共生型廃棄物発電等導入推進事業（うち地域の廃棄物を活用した地域エネルギー創出事業））の三次公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05705.html",
+      "title": "令和８年度自動車向け再生プラスチック市場構築のための産官学コンソーシアム（第１回）の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05656.html",
+      "title": "明治安田Ｊ１リーグ「ジェフユナイテッド市原・千葉 vs. 水戸ホーリーホック」におけるリチウムイオン電池等周知啓発イベントの実施について～リチウムイオン電池による火災防止強化キャンペーン～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05572.html",
+      "title": "「アジアにおけるOECMの推進に関する地域ワークショップ」の開催結果及び「アジア保護地域パートナーシップ（APAP）OECMロードマップ（2026–2030）」の公表について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05781.html",
+      "title": "石狩湾新港におけるアカカミアリの確認について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05724.html",
+      "title": "「令和８年度第１回水道における微生物問題検討会」の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00065.html",
+      "title": "韓国での高病原性鳥インフルエンザ（H5亜型）の確認に伴う野鳥サーベイランスの対応レベルの引き上げについて",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05747.html",
+      "title": "日・ベトナム間の二国間クレジット制度（JCM）の第10回合同委員会を開催しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05726.html",
+      "title": "「令和８年度浄化槽トップセミナー長野」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05711.html",
+      "title": "令和８年度第1回環境保健サーベイランス・局地的大気汚染健康影響検討会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05704.html",
+      "title": "中央環境審議会環境保健部会熱中症対策小委員会（第３回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05754.html",
+      "title": "「住宅省エネ2024キャンペーン」の事務局における登録事業者情報の漏洩の可能性について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05739.html",
+      "title": "令和８年度クマ出没対策コンサルティング実証事業に参加する地方公共団体の決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05733.html",
+      "title": "「『福島、その先の環境へ。』現地見学会2026」の実施について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05718.html",
+      "title": "令和８年度「CCU導入促進補助事業」の公募開始について（二次募集）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05729.html",
+      "title": "リユース促進キャンペーンの開始について ～チューコスパ！LIFEを始めませんか～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05722.html",
+      "title": "「洋上圧入CCS技術確立事業」の採択について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05716.html",
+      "title": "「つながる自然共生サイト2026 ～企業と地域が育むネイチャーポジティブ～」への参加者募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05713.html",
+      "title": "令和８年度「コスト競争力強化を図る再エネ等由来水素サプライチェーンモデル構築・実証事業」の採択について（二次公募）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05699.html",
+      "title": "令和８年度プラスチックのマテリアル・ケミカルリサイクルのジョイントによる高品質化・高収率化のモデル事業の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05672.html",
+      "title": "石綿健康被害判定小委員会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05654.html",
+      "title": "「アジア・ゼロエミッション共同体（AZEC）での炭素市場構築に関する国際会合」に係る成果レポートが公表されました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05735.html",
+      "title": "三陸復興国立公園（南三陸金華山地域）の公園区域及び公園計画の変更［一部変更］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05734.html",
+      "title": "伊勢志摩国立公園の公園区域及び公園計画の変更［第７次点検］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05732.html",
+      "title": "「国連気候変動枠組条約第31回締約国会議閣僚級準備会合（プレCOP31）」が開催されました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202601.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202602.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202603.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202604.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202605.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202606.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202607.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202608.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202609.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202610.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202611.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202501.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202502.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202503.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202504.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202505.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202506.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202507.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202508.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202509.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202510.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202511.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202512.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202401.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202402.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202403.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202404.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202405.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202406.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202407.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202408.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202409.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202410.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202411.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202412.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202301.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202302.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202303.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202304.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202305.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202306.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202307.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202308.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202309.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202310.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202311.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202312.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202201.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202202.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202203.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202204.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202205.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202206.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202207.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202208.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202209.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202210.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202211.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202212.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202101.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202102.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202103.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202104.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202105.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202106.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202107.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202108.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202109.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202110.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202111.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202112.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202001.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202002.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202003.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202004.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202005.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202006.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202007.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202008.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202009.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202010.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202011.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/202012.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201901.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201902.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201903.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201904.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201905.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201906.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201907.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201908.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201909.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201910.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201911.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201912.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201801.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201802.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201803.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201804.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201805.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201806.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201807.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201808.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201809.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201810.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201811.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201812.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201701.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201702.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201703.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201704.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201705.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201706.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201707.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201708.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201709.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201710.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201711.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201712.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201601.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201602.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201603.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201604.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201605.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201606.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201607.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201608.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201609.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201610.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201611.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201612.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201501.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201502.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201503.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201504.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201505.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201506.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201507.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201508.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201509.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201510.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201511.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201512.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201401.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201402.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201403.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201404.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201405.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201406.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201407.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201408.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201409.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201410.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201411.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201412.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201301.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201302.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201303.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201304.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201305.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201306.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201307.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201308.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201309.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201310.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201311.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201312.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201201.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201202.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201203.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201204.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201205.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201206.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201207.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201208.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201209.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201210.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201211.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201212.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201101.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201102.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201103.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201104.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201105.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201106.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201107.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201108.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201109.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201110.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201111.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201112.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201001.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201002.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201003.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201004.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201005.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201006.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201007.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201008.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201009.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201010.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201011.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/201012.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200901.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200902.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200903.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200904.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200905.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200906.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200907.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200908.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200909.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200910.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200911.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200912.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200801.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200802.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200803.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200804.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200805.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200806.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200807.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200808.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200809.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200810.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200811.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200812.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200701.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200702.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200703.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200704.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200705.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200706.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200707.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200708.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200709.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200710.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200711.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200712.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200601.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200602.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200603.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200604.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200605.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200606.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200607.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200608.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200609.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200610.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200611.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200612.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200501.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200502.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200503.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200504.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200505.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200506.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200507.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200508.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200509.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200510.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200511.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200512.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200401.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200402.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200403.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200404.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200405.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200406.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200407.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200408.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200409.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200410.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200411.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200412.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200301.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200302.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200303.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200304.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200305.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200306.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200307.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200308.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200309.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200310.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200311.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200312.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200201.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200202.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200203.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200204.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200205.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200206.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200207.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200208.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200209.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200210.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200211.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200212.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200101.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200102.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200103.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200104.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200105.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200106.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200107.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200108.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200109.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200110.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200111.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200112.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200001.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200002.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200003.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200004.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200005.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200006.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200007.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200008.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200009.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200010.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200011.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/200012.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199901.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199902.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199903.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199904.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199905.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199906.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199907.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199908.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199909.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199910.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199911.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199912.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199801.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199802.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199803.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199804.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199805.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199806.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199807.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199808.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199809.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199810.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199811.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199812.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199701.html",
+      "title": "1月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199702.html",
+      "title": "2月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199703.html",
+      "title": "3月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199704.html",
+      "title": "4月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199705.html",
+      "title": "5月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199706.html",
+      "title": "6月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199707.html",
+      "title": "7月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199708.html",
+      "title": "8月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199709.html",
+      "title": "9月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199710.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199711.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199712.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199610.html",
+      "title": "10月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199611.html",
+      "title": "11月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/199612.html",
+      "title": "12月",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARCHIVE_MONTH",
+      "verified": false
+    }
+  ],
+  "article_review_candidates": [
+    {
+      "url": "https://www.env.go.jp/press/press_05854.html",
+      "title": "「リチウムイオン電池等の処理施設リスト」掲載希望処理施設の公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05844.html",
+      "title": "「自治体向け衣類回収ガイドラインに関する検討会」（第２回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05828.html",
+      "title": "令和８年度環境配慮契約法基本方針検討会(第２回)の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05853.html",
+      "title": "東アジア酸性雨モニタリングネットワーク（EANET）第28回政府間会合（IG28）及びEANET設立25周年記念式典の開催について（お知らせ）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05825.html",
+      "title": "令和８年度「環境スタートアップ大賞」の募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05851.html",
+      "title": "令和８年度気候変動アクション環境大臣表彰～受賞者決定と表彰式・受賞者フォーラム開催のお知らせ～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05827.html",
+      "title": "石綿健康被害判定小委員会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05838.html",
+      "title": "SEMICON Japan 2026における「次世代半導体GaNの挑戦」セミナーの開催及び出展について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05821.html",
+      "title": "令和８年度「体験の機会の場」と連携した教職員等環境教育・学習推進リーダー養成研修の開催～「循環型社会を支える現場から学ぶ環境教育」③－循環型社会と生物多様性を結ぶ環境教育リーダー育成－～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05819.html",
+      "title": "「廃棄物・資源循環分野のフィジカルAIコンソーシアム」の設立と会員の募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/110930_00007.html",
+      "title": "令和８年度国立公園等資源整備事業費補助金（エコツーリズムを通じた地域の魅力向上事業）（三次公募）の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05834.html",
+      "title": "廃棄物処理法・バーゼル法に基づく輸出入基準に係る技術的事項検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05859.html",
+      "title": "「温室効果ガス算定排出量等の報告等に関する命令第一条第五号に規定する環境大臣及び経済産業大臣が定める国内認証排出削減量の一部を改正する件（案）」等に対する意見募集（パブリックコメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05847.html",
+      "title": "令和８年度特定外来生物防除等対策事業（交付金）の追加公募（二次公募）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05815.html",
+      "title": "（仮称）伊佐・えびの・人吉風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05803.html",
+      "title": "「絶滅のおそれのある野生動植物の種の保存につき講ずべき措置について（答申案）」に対する意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05793.html",
+      "title": "絶滅のおそれのある野生動植物の種の保存に関する法律に基づく生息地等保護区及び管理地区の指定案に関する公告及び意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05818.html",
+      "title": "令和8年度第1回エコチル調査企画評価委員会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05813.html",
+      "title": "【公募期間延長】令和８年度予算「業務用建築物の脱炭素改修加速化事業」の公募開始について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05826.html",
+      "title": "第５回トキと共生する里地づくりネットワーク協議会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05814.html",
+      "title": "「令和８年度 第１回生物多様性影響評価検討会総合検討会」の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05822.html",
+      "title": "令和８年度化学物質の内分泌かく乱作用に関する公開セミナーの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/104293_00006.html",
+      "title": "「人とペットの災害対策ガイドライン」の改訂等に係る検討会（第５回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05782.html",
+      "title": "気候変動リスク産官学連携ネットワーク公開シンポジウム開催について ～気候関連開示からレジリエンス強化への実践～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05634.html",
+      "title": "日・インド間の二国間クレジット制度（JCM）の詳細規則（Operational Manual）を策定しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05800.html",
+      "title": "水辺の環境活動プラットフォーム・第２回オンライン会合の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00103.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陽性確定 北海道音更町（野鳥国内２例目））",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05804.html",
+      "title": "令和８年度環境配慮契約法基本方針検討会 電力専門委員会(第２回)の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05786.html",
+      "title": "「令和８年度工場・事業場における脱炭素セミナー」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05805.html",
+      "title": "化学物質に関するグローバル枠組み（GFC） 第１回国際会議（IC1）の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/110729_00040.html",
+      "title": "公害健康被害補償不服審査会の裁決について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05789.html",
+      "title": "（仮称）下筌・松原揚水発電所新設計画に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05824.html",
+      "title": "ベトナム社会主義共和国農業環境省との環境協力に関する協力覚書の署名について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00087.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陽性確定 秋田県由利本荘市（野鳥国内１例目））",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05808.html",
+      "title": "2026年度CDP水セキュリティ・環境省共催セミナーの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05798.html",
+      "title": "「廃棄物発電由来エネルギーの地域内利活用に関する情報交換会（近畿）」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05795.html",
+      "title": "プラスチック Good Reduce Practice 2026 ～ワンウェイプラスチック排出抑制に資する優良な取組を募集します～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05741.html",
+      "title": "「太陽電池廃棄物の再資源化等の推進に関する法律」の下位法令の策定等に係る検討会（第２回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05801.html",
+      "title": "地域循環共生圏フォーラム2026「みんなで育てる、しなやかな地域 ～環境・社会・経済のレジリエンス～」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05764.html",
+      "title": "交通政策審議会第101回港湾分科会に係る港湾計画に対する環境省意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05751.html",
+      "title": "令和８年秋の叙勲受章者について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111120_00010.html",
+      "title": "令和８年度カワウの保護及び管理に関する検討会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05794.html",
+      "title": "中央環境審議会地球環境部会気候変動影響評価・適応小委員会（第11回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111111_00045.html",
+      "title": "石綿救済法に基づく指定疾病の認定に係る医学的判定結果について",
+      "original_queue": "FORMAL_REVIEW_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05807.html",
+      "title": "「GTF グリーンチャレンジデー2026 in 新宿御苑」 を開催します",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05806.html",
+      "title": "第269回中央環境審議会環境保健部会化学物質審査小委員会等合同会合の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05696.html",
+      "title": "生物多様性条約第17回締約国会議（CBD-COP17）、カルタヘナ議定書第12回締約国会合（CP-MOP12）及び名古屋議定書第６回締約国会合（NP-MOP6）の結果概要について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05748.html",
+      "title": "令和８年秋の褒章受章者について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00083.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （陰性確定、宮城県栗原市）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05779.html",
+      "title": "「空港における脱炭素化促進事業」及び「港湾における脱炭素化促進事業」の公募期間延長について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05775.html",
+      "title": "中央環境審議会循環型社会部会第２回食品リサイクル小委員会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05755.html",
+      "title": "中央環境審議会水環境・土壌農薬部会土壌制度小委員会（第10回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05720.html",
+      "title": "地域生物多様性増進法に基づく「自然共生サイト」の認定 （令和８年度第２回）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05772.html",
+      "title": "全国のニホンジカ及びイノシシの個体数推定等の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05771.html",
+      "title": "（仮称）田原中山風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05770.html",
+      "title": "放射性物質汚染対処特別措置法に基づく汚染状況重点調査地域の指定の解除について",
+      "original_queue": "FORMAL_REVIEW_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05769.html",
+      "title": "（仮称）銚子市沖洋上風力発電事業に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05760.html",
+      "title": "（仮称）北海道厚田風力発電事業に係る環境影響評価準備書に対する環境大臣意見の提出について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05753.html",
+      "title": "令和８年度自然歩道関係功労者表彰について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05664.html",
+      "title": "2030生物多様性枠組実現日本会議（J-GBF）第６回ビジネスフォーラムの開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05757.html",
+      "title": "第45回温泉関係功労者表彰について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05783.html",
+      "title": "令和８年度市街地等におけるクマ対策に係る技術導入実証事業の実施団体の決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05777.html",
+      "title": "「令和８年度ネイチャーファイナンス実践モデル事業」の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05776.html",
+      "title": "明治安田Ｊ２リーグ ブラウブリッツ秋田、ヴァンフォーレ甲府、モンテディオ山形ホームゲームにおけるリチウムイオン電池等周知啓発イベントの実施について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05774.html",
+      "title": "令和８年度小型家電リサイクル制度の普及啓発イベント実施のお知らせ（後期）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05665.html",
+      "title": "「ネイチャーポジティブ経営推進プラットフォーム」オンライン交流会開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05653.html",
+      "title": "「令和８年度調達におけるネイチャーポジティブに向けた実践モデル事業～課題の掘り起こし及び改善に向けて～」の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05773.html",
+      "title": "令和７年度補正予算循環型社会形成推進事業費補助金（自動車における再生材市場構築のための官学連携推進事業）の二次公募の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00070.html",
+      "title": "野鳥における高病原性鳥インフルエンザ発生状況について （疑い事例、宮城県栗原市）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05778.html",
+      "title": "「動物園を起点とした消費者の行動変容に向けた意見交換会」開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05761.html",
+      "title": "令和８年度グリーンスローモビリティ等導入促進事業の三次公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05758.html",
+      "title": "遺伝子組換え生ワクチン（犬用）の第一種使用等に関する承認に先立っての意見募集（パブリック・コメント）について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05756.html",
+      "title": "有明海・八代海等総合調査評価委員会 水産資源再生方策検討作業小委員会（第22回）及び 海域環境再生方策検討作業小委員会（第22回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_01660.html",
+      "title": "第９回日本・シンガポール環境政策対話の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05768.html",
+      "title": "令和８年度脱炭素型循環経済システム構築促進事業 （うち、プラスチック等資源循環システム構築実証事業）（委託） の公募結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05749.html",
+      "title": "令和８年度支障除去等に対する支援のあり方検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05717.html",
+      "title": "美野原カントリークラブ特別高圧太陽光発電所計画に係る計画段階環境配慮書に対する環境大臣意見の提出について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111227_00001.html",
+      "title": "令和8年度「脱炭素×復興まちづくり」実証事業の採択決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05710.html",
+      "title": "2026年度環境省LD-Techリスト（案）及び水準表（案）の 意見募集について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05784.html",
+      "title": "環境省が関わるメールマガジンにおける配信先情報の漏えいの可能性について（11月11日追記修正）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05740.html",
+      "title": "「太陽電池廃棄物の再資源化等の推進に関する法律」の下位法令の策定等に係る検討会（第１回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_LEGAL_CHANGE_REVIEW",
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05737.html",
+      "title": "令和８年度「体験の機会の場」と連携した教職員等環境教育・学習推進リーダー養成研修の開催～「循環型社会を支える現場から学ぶ環境教育」②－ごみが資源へ生まれ変わる仕組みと循環型社会の実践－～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05723.html",
+      "title": "「良好な環境創出シンポジウム2026」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05719.html",
+      "title": "第23回パリ協定６条４項監督機関会合に参加しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05728.html",
+      "title": "福島の環境再生に向けた復興再生土の利用等の環境省の取組についてのパネルディスカッションについて",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05727.html",
+      "title": "釧路湿原国立公園の公園区域及び公園計画の変更［第２次点検］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05731.html",
+      "title": "中央環境審議会第22回水環境・土壌農薬部会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05730.html",
+      "title": "中央環境審議会第26回大気・騒音振動部会及び第21回水環境・土壌農薬部会の合同開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05725.html",
+      "title": "気候変動に関する政府間パネル（IPCC）第65回総会の結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111264_00014.html",
+      "title": "令和８年度二酸化炭素排出抑制対策事業費等補助金（地域共生型廃棄物発電等導入推進事業（うち地域の廃棄物を活用した地域エネルギー創出事業））の三次公募について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05705.html",
+      "title": "令和８年度自動車向け再生プラスチック市場構築のための産官学コンソーシアム（第１回）の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05656.html",
+      "title": "明治安田Ｊ１リーグ「ジェフユナイテッド市原・千葉 vs. 水戸ホーリーホック」におけるリチウムイオン電池等周知啓発イベントの実施について～リチウムイオン電池による火災防止強化キャンペーン～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05572.html",
+      "title": "「アジアにおけるOECMの推進に関する地域ワークショップ」の開催結果及び「アジア保護地域パートナーシップ（APAP）OECMロードマップ（2026–2030）」の公表について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05781.html",
+      "title": "石狩湾新港におけるアカカミアリの確認について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05724.html",
+      "title": "「令和８年度第１回水道における微生物問題検討会」の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/111118_00065.html",
+      "title": "韓国での高病原性鳥インフルエンザ（H5亜型）の確認に伴う野鳥サーベイランスの対応レベルの引き上げについて",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_LEGACY_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05747.html",
+      "title": "日・ベトナム間の二国間クレジット制度（JCM）の第10回合同委員会を開催しました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05726.html",
+      "title": "「令和８年度浄化槽トップセミナー長野」の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05711.html",
+      "title": "令和８年度第1回環境保健サーベイランス・局地的大気汚染健康影響検討会の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW",
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05704.html",
+      "title": "中央環境審議会環境保健部会熱中症対策小委員会（第３回）の開催について",
+      "original_queue": "REFERENCE_CANDIDATE_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_PROPOSAL_OR_CONSULTATION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05754.html",
+      "title": "「住宅省エネ2024キャンペーン」の事務局における登録事業者情報の漏洩の可能性について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ADMINISTRATIVE_ACTION_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05739.html",
+      "title": "令和８年度クマ出没対策コンサルティング実証事業に参加する地方公共団体の決定について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05733.html",
+      "title": "「『福島、その先の環境へ。』現地見学会2026」の実施について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05718.html",
+      "title": "令和８年度「CCU導入促進補助事業」の公募開始について（二次募集）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05729.html",
+      "title": "リユース促進キャンペーンの開始について ～チューコスパ！LIFEを始めませんか～",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05722.html",
+      "title": "「洋上圧入CCS技術確立事業」の採択について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05716.html",
+      "title": "「つながる自然共生サイト2026 ～企業と地域が育むネイチャーポジティブ～」への参加者募集について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05713.html",
+      "title": "令和８年度「コスト競争力強化を図る再エネ等由来水素サプライチェーンモデル構築・実証事業」の採択について（二次公募）",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05699.html",
+      "title": "令和８年度プラスチックのマテリアル・ケミカルリサイクルのジョイントによる高品質化・高収率化のモデル事業の採択結果について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05672.html",
+      "title": "石綿健康被害判定小委員会の開催について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [
+        "POSSIBLE_ENVIRONMENTAL_COMPLIANCE_REVIEW"
+      ],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05654.html",
+      "title": "「アジア・ゼロエミッション共同体（AZEC）での炭素市場構築に関する国際会合」に係る成果レポートが公表されました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05735.html",
+      "title": "三陸復興国立公園（南三陸金華山地域）の公園区域及び公園計画の変更［一部変更］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05734.html",
+      "title": "伊勢志摩国立公園の公園区域及び公園計画の変更［第７次点検］に関する意見の募集（パブリック・コメント）について",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    },
+    {
+      "url": "https://www.env.go.jp/press/press_05732.html",
+      "title": "「国連気候変動枠組条約第31回締約国会議閣僚級準備会合（プレCOP31）」が開催されました",
+      "original_queue": "OTHER_UNVERIFIED",
+      "url_group": "ARTICLE_SHAPE_PRESS_UNVERIFIED",
+      "review_signals": [],
+      "manual_review_required": true,
+      "legal_change_confirmed": false
+    }
+  ],
+  "warnings": [
+    "HEURISTIC_TITLE_SIGNALS_ONLY",
+    "NO_SIGNAL_IS_NOT_IRRELEVANT",
+    "NO_ARTICLE_BODY_OR_ATTACHMENTS_CHECKED",
+    "NO_LEGAL_CHANGE_CONFIRMED",
+    "NO_COLLECTION_COMPLETENESS_CLAIM",
+    "ALL_ARTICLES_REQUIRE_MANUAL_REVIEW",
+    "NO_CANDIDATES_DROPPED_FOR_100_ITEM_LIMIT"
+  ],
+  "diagnostic_status": "HOLD",
+  "comparison_allowed": false,
+  "complete_collection_verified": false,
+  "legal_amendment_confirmed": false,
+  "rms_modified": false,
+  "network_accessed": false
+}
