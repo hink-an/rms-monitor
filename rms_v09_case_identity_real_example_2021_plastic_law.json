@@ -1,0 +1,65 @@
+{
+  "fixture_id": "RMS-V09-REAL-PLASTIC-LAW-2021-2022-V01",
+  "purpose": "Offline evidence candidate for linking a promulgated law to a later effective-date decree; NOT an approved legal determination",
+  "fixture_kind": "REAL_SOURCE_EVIDENCE_CANDIDATE",
+  "review_state": "HOLD_PENDING_HUMAN_REVIEW",
+  "source_checked_on": "2026-11-19",
+  "no_network_requests_during_test": true,
+  "no_notification": true,
+  "no_rms_updates": true,
+  "important_limitation": "The existing case_identity prototype models Amendment, whereas this source example is a NEW ENACTMENT (not an amendment). Do not treat program acceptance as proof that all enactment types are supported.",
+  "amendment": {
+    "law_name": "プラスチックに係る資源循環の促進等に関する法律",
+    "amendment_document_id": "JP-2021-LAW-60",
+    "document_id_is_normalized_for_test": true,
+    "official_document_number": "令和3年法律第60号",
+    "promulgation_date": "2021-06-11",
+    "official_url": "https://www.env.go.jp/press/110432.html",
+    "human_reviewed": false,
+    "formally_decided": true,
+    "amendment_scope": "新法制定・公布。施行期日は政令で定める。",
+    "source_evidence": [
+      {"url": "https://www.env.go.jp/press/110432.html", "supports": "law number and promulgation date; later effective date decree and April 1 start"},
+      {"url": "https://www.env.go.jp/content/000050390.pdf", "supports": "explicit official linkage between 2021 law no. 60 and 2022 decree no. 24"}
+    ]
+  },
+  "effective_date_evidence": [
+    {
+      "source_document_id": "JP-2022-DECREE-24",
+      "document_id_is_normalized_for_test": true,
+      "official_document_number": "令和4年政令第24号",
+      "official_url": "https://www.env.go.jp/content/000050390.pdf",
+      "human_reviewed": false,
+      "amendment_document_id_referenced": "JP-2021-LAW-60",
+      "reference_confirmed_in_official_text": false,
+      "provision_key": "ENTIRE_LAW_EFFECTIVE_DATE",
+      "effective_date": "2022-04-01",
+      "effective_date_confirmed": true,
+      "announcement_url": "https://www.env.go.jp/press/110432.html",
+      "promulgation_date_of_decree": "2022-01-19",
+      "source_evidence": [
+        {"url": "https://www.env.go.jp/press/110432.html", "supports": "date decree announced as promulgated January 19 and law effective April 1"},
+        {"url": "https://www.env.go.jp/content/000050390.pdf", "supports": "decree official number 24 and explicit reference to 2021 law no. 60"}
+      ]
+    }
+  ],
+  "historical_timeline": [
+    {"date": "2021-06-11", "event": "law promulgated", "hypothetical_rms_action": "initial notice candidate subject to confirmation"},
+    {"date": "2022-01-14", "event": "cabinet decision announced", "hypothetical_rms_action": "retain as reference; do not mistake for promulgation", "source_url": "https://www.env.go.jp/press/110313.html"},
+    {"date": "2022-01-19", "event": "effective-date decree promulgated", "hypothetical_rms_action": "repeat notice candidate after human approval"},
+    {"date": "2022-04-01", "event": "law effective", "hypothetical_rms_action": "track effective date"}
+  ],
+  "prototype_preconditions": {
+    "previous_segments": {},
+    "previous_case_document_id": "JP-2021-LAW-60",
+    "previous_snapshot_is_assumed_for_offline_test_only": true,
+    "human_approval_not_given": true
+  },
+  "expected_current_result": {
+    "status": "HOLD",
+    "notification_sent": false,
+    "rms_modified": false,
+    "comparison_allowed": false,
+    "reason": "human_reviewed false and explicit source link not yet marked confirmed by an authorized human"
+  }
+}
