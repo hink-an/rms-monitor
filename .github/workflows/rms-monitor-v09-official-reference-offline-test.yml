@@ -1,0 +1,21 @@
+name: RMS Monitor v0.9 Official Reference Offline Safety Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  official-reference-offline-safety:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out test files
+        uses: actions/checkout@v4
+
+      - name: Run official reference offline safety tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -B -m unittest -v test_rms_v09_official_reference_prototype.py
