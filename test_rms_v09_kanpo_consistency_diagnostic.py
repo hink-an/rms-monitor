@@ -64,7 +64,7 @@ class KanpoConsistencyDiagnostics(unittest.TestCase):
         # Confirm that the Kanpo-style statutory basis
         # is recognized by the present prototype.
         self.assertTrue(checks["statutory_basis"])
-       self.assertNotIn(
+        self.assertNotIn(
             "EVIDENCE_STATUTORY_BASIS_MISSING",
             result["issues"],
         )
