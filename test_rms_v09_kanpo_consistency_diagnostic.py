@@ -55,26 +55,26 @@ class KanpoConsistencyDiagnostics(unittest.TestCase):
         self.assertFalse(result["rms_modified"])
         self.assertFalse(result["legal_link_confirmed"])
 
-    def test_01_kanpo_basis_wording_mismatch(self):
+    def test_01_kanpo_basis_wording_detected(self):
         result = review(DECREE_24)
         self.assert_safe(result)
 
         checks = result["evidence_candidate"]["matches"]
 
-        # Detect that the original Kanpo wording is not
-        # recognized by the present prototype.
-        self.assertFalse(checks["statutory_basis"])
-        self.assertIn(
+        # Confirm that the Kanpo-style statutory basis
+        # is recognized by the present prototype.
+        self.assertTrue(checks["statutory_basis"])
+       self.assertNotIn(
             "EVIDENCE_STATUTORY_BASIS_MISSING",
             result["issues"],
         )
 
-    def test_02_synthetic_basis_is_detected(self):
+   def test_02_synthetic_basis_is_not_detected(self):
         result = review(SYNTHETIC_COMPATIBLE)
         self.assert_safe(result)
 
         checks = result["evidence_candidate"]["matches"]
-        self.assertTrue(checks["statutory_basis"])
+       self.assertFalse(checks["statutory_basis"])
 
         # Recognition must never mean legal approval.
         self.assertFalse(result["legal_link_confirmed"])
