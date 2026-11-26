@@ -68,13 +68,12 @@ class KanpoConsistencyDiagnostics(unittest.TestCase):
             "EVIDENCE_STATUTORY_BASIS_MISSING",
             result["issues"],
         )
-
-   def test_02_synthetic_basis_is_not_detected(self):
+    def test_02_synthetic_basis_is_not_detected(self):
         result = review(SYNTHETIC_COMPATIBLE)
         self.assert_safe(result)
 
         checks = result["evidence_candidate"]["matches"]
-       self.assertFalse(checks["statutory_basis"])
+        self.assertFalse(checks["statutory_basis"])
 
         # Recognition must never mean legal approval.
         self.assertFalse(result["legal_link_confirmed"])
